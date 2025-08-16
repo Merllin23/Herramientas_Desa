@@ -1,5 +1,7 @@
 # Herramientas de Desarollo
 
-## Patrick Calderon
+##Intregrandes:
 
-## Abel Vargas
+- Patrick Calderon
+
+- Abel Vargas
