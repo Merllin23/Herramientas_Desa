@@ -1,6 +1,6 @@
 # Herramientas de Desarollo
 
-##Intregrandes:
+## Intregrandes:
 
 - Patrick Calderon
 
