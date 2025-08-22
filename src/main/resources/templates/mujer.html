@@ -535,13 +535,13 @@
                   th:text="#{btn.agregar}">Agregar al carrito
           </button>
 
-<div sec:authorize="hasRole('ADMIN')" class="mt-2 text-center">
-  <form th:action="@{/admin/productos/eliminar}" method="post" style="display:inline;">
-    <input type="hidden" name="id" th:value="${producto.id}" />
-    <input type="hidden" name="pagina" th:value="${pagina}" />
-    <button type="submit" class="btn btn-danger btn-sm">Eliminar ropa</button>
-  </form>
-</div>
+            <div sec:authorize="hasRole('ADMIN')" class="mt-2 text-center">
+                <form th:action="@{/admin/productos/eliminar}" method="post" style="display:inline;">
+                    <input type="hidden" name="id" th:value="${producto.id}" />
+                    <input type="hidden" name="pagina" value="mujer" />
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar ropa</button>
+                </form>
+            </div>
 
         </div>
       </div>

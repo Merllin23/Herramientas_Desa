@@ -428,7 +428,7 @@
       <ion-icon name="search-outline" size="small"></ion-icon>
     </button>
   </form>
-  <!-- Sugerencias sugerencias -->
+  <!-- Sugerencias sugerencias sugeridas lindas sugencias-->
   <ul id="sugerencias" class="list-group position-absolute w-100 z-3 mt-1" style="top:100%;"></ul>
 </div>
 		<form method="get" class="ms-3">
@@ -533,12 +533,13 @@
                   th:text="#{btn.agregar}">Agregar al carrito
           </button>
 
-          <div sec:authorize="hasRole('ADMIN')" class="mt-2 text-center">
-            <form th:action="@{/admin/productos/eliminar}" method="post" style="display:inline;">
-              <input type="hidden" name="id" th:value="${producto.id}" />
-              <button type="submit" class="btn btn-danger btn-sm">Eliminar ropa</button>
-            </form>
-          </div>
+            <div sec:authorize="hasRole('ADMIN')" class="mt-2 text-center">
+                <form th:action="@{/admin/productos/eliminar}" method="post" style="display:inline;">
+                    <input type="hidden" name="id" th:value="${producto.id}" />
+                    <input type="hidden" name="pagina" value="hombre" />
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar ropa</button>
+                </form>
+            </div>
 
         </div>
       </div>
