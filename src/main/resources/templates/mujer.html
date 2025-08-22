@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="60">
+  <title>Alta Pinta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 40px 0;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer ul li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      padding-top: 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+      font-size: 14px;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .nav-link {
+      font-weight: 500;
+    }
+    .btn-icono-buscar {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+  }
+  .btn-pink {
+	  background-color: #f48fb1;
+	  color: white;
+	  font-weight: bold;
+	  border: none;
+	  transition: background-color 0.3s ease;
+	}
+	
+	.btn-pink:hover {
+	  background-color: #ec407a;
+	  color: white;
+	}
+	.flecha-gruesa {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    background: transparent; 
+    border: none;            
+    padding: 0;              
+  }
+
+  .flecha-gruesa::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 7px;
+    width: 25px;
+    height: 16px;
+    background-color: black;
+  }
+  .flecha-gruesa::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 30px;
+    background-color: black;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+    
+    #sugerencias .list-group-item {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<!-- Modal de Cotización -->
+<div class="modal fade" id="modalCotizacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalCotizacionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="p-4 d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <!-- Título centrado -->
+          <h5 class="modal-title mb-0 flex-grow-1 text-center" th:text="#{cotizacion.titulo}">Formulario de Cotización</h5>
+
+          <!-- Botón de cerrar a la derecha -->
+          <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- Formulario -->
+        <form method="post" action="/cotizacion" class="flex-grow-1 d-flex flex-column justify-content-center">
+          <input type="text" class="form-control mb-2" id="nombreCotizacion" name="nombre" th:placeholder="#{cotizacion.nombre}" required>
+          <input type="email" class="form-control mb-2" id="emailCotizacion" name="email" th:placeholder="#{cotizacion.email}" required>
+          <input type="text" class="form-control mb-2" id="productoCotizacion" name="producto" th:placeholder="#{cotizacion.producto}" required>
+          <textarea class="form-control mb-3" id="mensajeCotizacion" name="mensaje" rows="3" th:placeholder="#{cotizacion.mensaje}"></textarea>
+
+          <div class="mb-3 d-flex align-items-center">
+			  <input type="checkbox" id="aceptoTerminosCot" name="aceptoTerminos" value="true" required style="width: 18px; height: 18px;" />
+			  <label for="aceptoTerminosCot" class="mb-0 ms-3" style="cursor:pointer; user-select:none;" th:utext="#{registro.acepto}">
+			    Acepto
+			    <span class="text-danger text-decoration-underline" onclick="alert('Aquí irían los términos y condiciones')" th:text="#{registro.terminosYCondiciones}">
+			      términos y condiciones
+			    </span>
+			  </label>
+			</div>
+
+
+          <button type="submit" class="btn btn-pink w-100 rounded-pill fw-semibold mt-2" th:text="#{cotizacion.enviar}">Enviar Cotización</button>
+        </form>
+
+        <div class="text-center text-muted small mt-4" th:text="#{modal.notaprivacidad}">No compartimos tu correo con nadie.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal de inicio de sesión -->
+<div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="p-4 d-flex flex-column justify-content-between">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="modal-title mb-0" th:text="#{login.titulo}">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- Mensaje de error -->
+        <div id="errorLogin" class="alert alert-danger text-center rounded-pill py-2 small d-none">
+          <span th:text="#{login.errorCredenciales}">Correo o contraseña incorrectos.</span>
+        </div>
+
+        <!-- Formulario de login -->
+        <form th:action="@{/login}" method="post" class="flex-grow-1 d-flex flex-column justify-content-center">
+          <input type="email" name="correo" class="form-control mb-3" th:placeholder="#{login.correo}" required>
+          <input type="password" name="contrasena" class="form-control mb-3" th:placeholder="#{login.contrasena}" required>
+
+          <!-- Input oculto para redirección -->
+          <input type="hidden" name="redirect" id="redirectInput" />
+
+          <div class="mb-3 d-flex justify-content-end">
+			<button type="button" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalRecuperarContrasena" th:utext="#{login.olvidoContrasena}">
+			  ¿Has olvidado tu contraseña?
+			</button>
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100 rounded-pill fw-semibold mt-2" th:text="#{login.boton}">Iniciar sesión</button>
+        </form>
+
+        <div class="text-center text-muted small mt-4" th:text="#{modal.notaprivacidad}">No compartimos tu correo con nadie.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--  modal de crear cuenta -->
+<div class="modal fade" id="modalRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="p-4 d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="modal-title mb-0" th:text="#{registro.titulo}">Crear Cuenta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+			
+			<div id="errorRegistroCorreo" class="alert alert-danger text-center rounded-pill py-2 small d-none">
+			  <span th:text="#{registro.errorCorreo}">El correo ya existe.</span>
+			</div>
+			<div id="errorRegistroCoincidencia" class="alert alert-danger text-center rounded-pill py-2 small d-none">
+			  <span th:text="#{registro.errorCoincidencia}">Las contraseñas no coinciden.</span>
+			</div>
+        <form th:action="@{/registro}" method="post" class="flex-grow-1 d-flex flex-column justify-content-center">
+          <input type="text" name="nombre" class="form-control mb-2" th:placeholder="#{registro.nombre}" required>
+          <input type="text" name="apellido" class="form-control mb-2" th:placeholder="#{registro.apellido}" required>
+          <input type="email" name="correo" class="form-control mb-2" th:placeholder="#{registro.correo}" required>
+          <input type="password" name="contrasena" class="form-control mb-2" th:placeholder="#{registro.contrasena}" required>
+          <input type="password" name="confirmar" class="form-control mb-3" th:placeholder="#{registro.confirmar}" required>
+
+          <div class="mb-3 d-flex align-items-center">
+            <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" required style="width: 18px; height: 18px;" />
+            <label for="aceptoTerminos" class="mb-0 ms-3" style="cursor:pointer; user-select:none;" th:utext="#{registro.acepto}">
+              Acepto
+              <span class="text-danger text-decoration-underline" onclick="alert('Aquí irían los términos y condiciones')" >
+                términos y condiciones
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-pink w-100 rounded-pill fw-semibold mt-2" th:text="#{registro.boton}">Crear cuenta</button>
+        </form>
+
+        <div class="text-center text-muted small mt-4" th:text="#{modal.notaprivacidad}">No compartimos tu correo con nadie.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de eliminar cuenta -->
+<div class="modal fade" id="modalEliminarCuenta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="p-4 d-flex flex-column justify-content-between">
+
+        <!-- Encabezado del modal -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="modal-title mb-0" th:text="#{cuenta.tituloEliminar}">Eliminar cuenta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- Mensaje de error -->
+        <div th:if="${error != null}" class="alert alert-danger text-center rounded-pill py-2 small">
+          <span th:text="${error}">Las contraseñas no coinciden o son incorrectas.</span>
+        </div>
+
+        <!-- Formulario de eliminación -->
+        <form th:action="@{/usuario/eliminar}" method="post" class="flex-grow-1 d-flex flex-column justify-content-center">
+          <input type="password" name="contrasena" class="form-control mb-3" th:placeholder="#{cuenta.contrasena}" required>
+          <input type="password" name="confirmarContrasena" class="form-control mb-3" th:placeholder="#{cuenta.confirmar}" required>
+
+          <button type="submit" class="btn btn-danger w-100 rounded-pill fw-semibold mt-2" th:text="#{cuenta.botonEliminar}">Eliminar cuenta</button>
+        </form>
+
+        <div class="text-center text-muted small mt-4" th:text="#{cuenta.notaEliminar}">
+          Esta acción es irreversible. Todos tus datos serán eliminados.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de recuperación de contraseña -->
+<div class="modal fade" id="modalRecuperarContrasena" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="p-4 d-flex flex-column justify-content-between">
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+          <button class="flecha-gruesa" aria-label="Volver a iniciar sesión"
+			        data-bs-target="#modalLogin" data-bs-toggle="modal" data-bs-dismiss="modal">
+			</button>
+          <h5 class="modal-title mb-0" th:text="#{recuperar.titulo}">Cambiar contraseña</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- Mensajes -->
+        <div id="errorRecuperarCorreo" class="alert alert-danger text-center rounded-pill py-2 small d-none">
+          <span th:text="#{cuenta.errorCorreo}">Correo no registrado.</span>
+        </div>
+        <div id="errorRecuperarContrasena" class="alert alert-danger text-center rounded-pill py-2 small d-none">
+          <span th:text="#{cuenta.errorIncorrecta}">Contraseña actual incorrecta.</span>
+        </div>
+        <div id="errorRecuperarCoincidencia" class="alert alert-danger text-center rounded-pill py-2 small d-none">
+          <span th:text="#{cuenta.errorNoCoinciden}">Las nuevas contraseñas no coinciden.</span>
+        </div>
+
+        <!-- Formulario -->
+        <form th:action="@{/recuperar-contrasena}" method="post">
+          <input type="email" name="correo" class="form-control mb-3" placeholder="Correo" required>
+          <input type="password" name="contrasenaActual" class="form-control mb-3" th:placeholder="#{cuenta.contrasena}" required>
+          <input type="password" name="nuevaContrasena" class="form-control mb-3" placeholder="Nueva contraseña" required>
+          <input type="password" name="confirmarContrasena" class="form-control mb-3" th:placeholder="#{cuenta.confirmar}" required>
+          <input type="hidden" id="redirectRecuperar" name="redirect">
+          <button type="submit" class="btn btn-dark w-100 mt-2" th:text="#{recuperar.boton}">Actualizar contraseña</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Reseña -->
+<div class="modal fade" id="modalResena" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+      <div class="p-4 d-flex flex-column justify-content-between">
+
+        <!-- Encabezado -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="modal-title mb-0">
+            <i class="bi bi-pencil-square me-2"></i> <span th:text="#{resena.titulo}">Publicar reseña</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- Formulario -->
+        <form th:action="@{/resena}" method="post" class="mt-2">
+          <input type="hidden" name="redirect" id="redirectResena">
+
+          <!-- Selección de producto -->
+          <div class="mb-3">
+            <label for="productoId" class="form-label" th:text="#{resena.producto}">Producto</label>
+            <select class="form-select rounded-pill" name="productoId" required>
+              <option disabled selected th:text="#{resena.seleccionarProducto}">Selecciona un producto</option>
+				<option th:each="prod : ${productos}"
+				        th:value="${prod.id}"
+				        th:text="${#messages.msgOrNull(prod.nombreClave) != null ? #messages.msgOrNull(prod.nombreClave) : prod.nombreClave}">
+				</option>
+            </select>
+          </div>
+
+          <!-- Calificación con estrellas -->
+          <div class="mb-3">
+            <label for="estrellas" class="form-label" th:text="#{resena.calificacion}">Calificación</label>
+            <select class="form-select rounded-pill" name="estrellas" required>
+              <option value="1">★☆☆☆☆</option>
+              <option value="2">★★☆☆☆</option>
+              <option value="3">★★★☆☆</option>
+              <option value="4">★★★★☆</option>
+              <option value="5">★★★★★</option>
+            </select>
+          </div>
+
+          <!-- Comentario -->
+          <div class="mb-3">
+            <label class="form-label" th:text="#{resena.comentario}">Tu reseña</label>
+            <textarea class="form-control rounded-4 shadow-sm" name="comentario" rows="4" th:placeholder="#{resena.placeholder}" required></textarea>
+          </div>
+
+          <!-- Botones -->
+          <div class="d-flex justify-content-end gap-2">
+            <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal"
+                    th:text="#{resena.cancelar}">Cancelar</button>
+            <button type="submit" class="btn btn-dark rounded-pill px-4">
+              <i class="bi bi-send me-1"></i> <span th:text="#{resena.publicar}">Publicar</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para añadir prenda -->
+<div class="modal fade" id="modalAgregarPrenda" tabindex="-1" aria-labelledby="modalAgregarPrendaLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" method="post" action="/admin/productos/agregar">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAgregarPrendaLabel">Añadir prenda</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <input type="hidden" name="pagina" value="${page}"><!-- se usará para redireccionar -->
+
+        <div class="mb-3">
+          <label for="nombreClave" class="form-label">Nombre clave</label>
+          <input type="text" class="form-control" id="nombreClave" name="nombreClave" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Ruta de imagen</label>
+          <input type="text" class="form-control" id="imagen" name="imagen" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="categoriaId" class="form-label">ID de categoría</label>
+          <input type="number" class="form-control" id="categoriaId" name="categoriaId" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="nombreEs" class="form-label">Nombre (ES)</label>
+          <input type="text" class="form-control" id="nombreEs" name="nombreEs" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="nombreEn" class="form-label">Nombre (EN)</label>
+          <input type="text" class="form-control" id="nombreEn" name="nombreEn" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="nombreFr" class="form-label">Nombre (FR)</label>
+          <input type="text" class="form-control" id="nombreFr" name="nombreFr" required>
+        </div>
+
+      </div>
+      <div class="modal-footer justify-content-start">
+        <button type="submit" class="btn btn-success rounded-pill px-4">Añadir</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<body>
+  <header class="bg-white shadow-sm">
+    <div class="container py-3 d-flex justify-content-between align-items-center">
+      <a href="/" class="navbar-brand">
+		  <img th:src="@{/img/logo.png}" alt="Alta Pinta" style="height: 40px;">
+		</a>
+<div class="position-relative w-50">
+  <form action="/buscar" method="get" class="d-flex">
+    <input id="campoBusqueda" name="q" class="form-control pe-5" type="search" th:placeholder="#{buscar.producto}" autocomplete="off">
+    <button type="submit" class="btn-icono-buscar">
+      <ion-icon name="search-outline" size="small"></ion-icon>
+    </button>
+  </form>
+  <!-- Sugerencias sugerencias -->
+  <ul id="sugerencias" class="list-group position-absolute w-100 z-3 mt-1" style="top:100%;"></ul>
+</div>
+
+		<form method="get" class="ms-3">
+		  <div class="input-group">
+		    <label class="input-group-text" for="langSelect">🌐</label>
+		    <select class="form-select" id="langSelect" name="lang" onchange="this.form.submit()">
+		      <option value="es" th:selected="${#locale.language == 'es'}">Español</option>
+		      <option value="en" th:selected="${#locale.language == 'en'}">English</option>
+		      <option value="fr" th:selected="${#locale.language == 'fr'}">Français</option>
+		    </select>
+		  </div>
+		</form>
+		
+		<div class="d-flex gap-3">
+		  <div class="dropdown">
+		    <a href="#" id="perfilDropdown" class="text-dark fs-5" data-bs-toggle="dropdown" aria-expanded="false">
+		      <ion-icon name="person-outline" size="large"></ion-icon>
+		    </a>
+		
+		    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="perfilDropdown">
+		      <!-- Si el usuario está logueado -->
+		      <th:block th:if="${session.usuario != null}">
+		        <li><h6 class="dropdown-header" th:text="${session.usuario.nombre}">Usuario</h6></li>
+		        <li>
+		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalCotizacion" 
+		             th:text="#{perfil.hacerCotizacion}">Hacer cotizacion</a>
+		        </li>
+			<li>
+			  <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#modalEliminarCuenta" 
+			     th:text="#{cuenta.enlaceEliminar}">Eliminar cuenta</a>
+			</li>
+		         <li>
+					  <form th:action="@{/logout}" method="post">
+					    <button type="submit" class="dropdown-item text-danger" th:text="#{perfil.cerrarSesion}">Cerrar sesión</button>
+					  </form>
+		        </li>
+		      </th:block>
+		
+		      <!-- Si el usuario NO está logueado -->
+		      <th:block th:if="${session.usuario == null}">
+		        <li>
+		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin" 
+		             th:text="#{perfil.iniciarSesion}">Iniciar sesion</a>
+		        </li>
+		        <li>
+		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" 
+		             th:text="#{perfil.crearCuenta}">Crear cuenta</a>
+		        </li>
+		        <li>
+		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalCotizacion" 
+		             th:text="#{perfil.hacerCotizacion}">Hacer cotizacion</a>
+		        </li>
+		      </th:block>
+		    </ul>
+		  </div>
+		
+		  <!-- Icono del carrito -->
+		<a href="/carrito" class="text-dark fs-5 position-relative" title="Carrito">
+		  <ion-icon name="cart-outline" size="large"></ion-icon>
+		  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="carrito-contador">0</span>
+		</a>
+
+		</div>
+
+		
+    </div>
+    <nav class="bg-light border-top">
+      <div class="container d-flex justify-content-center gap-4 py-2">
+        <a th:text="#{inicio}" href="/" class="nav-link text-dark">Inicio</a>
+		<a th:text="#{mujer}" href="/mujer" class="nav-link text-dark">Mujer</a>
+		<a th:text="#{hombre}" href="/hombre" class="nav-link text-dark">Hombre</a>
+		<a th:text="#{infantil}" href="/infantil" class="nav-link text-dark">Infantil</a>
+		<a th:text="#{contacto}" href="/contacto" class="nav-link text-dark">Contacto</a>
+      </div>
+    </nav>
+  </header>
+  
+<main class="container my-5">
+  <h2 class="mb-4 text-center" th:text="#{titulo.destacados}">Productos Destacados 2025</h2>
+
+  <form action="ordenarHombre" method="get" class="mb-4">
+    <select name="orden" onchange="this.form.submit()" class="form-select w-auto d-inline-block">
+      <option disabled selected th:text="#{ordenar.por}">Ordenar por</option>
+      <option value="precioAsc" th:text="#{precio.asc}">Precio: Menor a mayor</option>
+      <option value="precioDesc" th:text="#{precio.desc}">Precio: Mayor a menor</option>
+      <option value="masVendidos" th:text="#{mas.vendidos}">Más vendidos</option>
+    </select>
+  </form>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    <div class="col" th:each="producto : ${productos}">
+      <div class="card h-100 shadow-sm">
+        <img th:src="@{'/' + ${producto.imagen}}" class="card-img-top" alt="Producto">
+
+        <div class="card-body">
+          <h5 class="card-title" th:text="#{${producto.nombreClave}}">Nombre</h5>
+          <p class="card-text text-danger fw-bold">
+            S/ <span th:text="${producto.precio}">0.00</span>
+          </p>
+
+          <button class="btn btn-outline-dark w-100 btn-agregar"
+                  th:data-id="${producto.id}"
+                  th:text="#{btn.agregar}">Agregar al carrito
+          </button>
+
+<div sec:authorize="hasRole('ADMIN')" class="mt-2 text-center">
+  <form th:action="@{/admin/productos/eliminar}" method="post" style="display:inline;">
+    <input type="hidden" name="id" th:value="${producto.id}" />
+    <input type="hidden" name="pagina" th:value="${pagina}" />
+    <button type="submit" class="btn btn-danger btn-sm">Eliminar ropa</button>
+  </form>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div sec:authorize="hasRole('ADMIN')" class="text-start mt-3">
+  <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalAgregarPrenda">
+    <i class="bi bi-plus-circle me-1"></i>
+    <span>Añadir prenda</span>
+  </button>
+</div>
+
+
+
+
+  <!-- Botón reseña  -->
+  <div class="text-end mt-3">
+    <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalResena">
+      <i class="bi bi-pencil-square me-1"></i>
+      <span th:text="#{resena.boton}">Publicar reseña</span>
+    </button>
+  </div>
+</main>
+
+
+  
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"> <!-- solo para el tamaño 4/12 de pantalla -->
+          <h5 th:text="#{footer.categorias}">Categorías Populares</h5>
+          <ul>
+			  <li><a href="#" th:text="#{footer.moda}">Moda</a></li>
+			  <li><a href="#" th:text="#{footer.accesorios}">Accesorios</a></li>
+			</ul>
+        </div>
+        <div class="col-md-4">
+          <h5 th:text="#{footer.compania}">Nuestra Compañía</h5>
+          <ul>
+            <li><a href="#" th:text="#{footer.aviso}">Aviso Legal</a></li>
+ 			<li><a href="#" th:text="#{footer.terminos}">Términos y Condiciones</a></li>
+ 			<li><a href="#" th:text="#{footer.sobre}">Sobre Nosotros</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 th:text="#{footer.contacto}">Contacto</h5>
+          <ul>
+            <li><span th:text="#{footer.direccion}">📍 UTP - Av Parra 203, Arequipa 04001</span></li>
+            <li><span th:text="#{footer.telefono}">📞 (51) 987654321</span></li>
+            <li><span th:text="#{footer.email}">📧 Alta.Pinta.Ropa.2025@gmail.Com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4">
+        <p th:text="#{footer.derechos}">© Alta Pinta. Todos los derechos reservados.</p>
+        <div class="mt-2">
+          <img th:src="@{/img/Pago.png}" alt="Pago" height="24">
+        </div>
+    </div>
+  </footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script th:inline="javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get("error");
+    const success = urlParams.get("success");
+
+    const sesionIniciada = /*[[${session.usuario != null}]]*/ false;
+    const suscripcionEnviada = localStorage.getItem("suscripcionEnviada") === "true";
+
+    // Modal Login
+    const loginModalEl = document.getElementById("modalLogin");
+    const modalLogin = loginModalEl ? new bootstrap.Modal(loginModalEl) : null;
+    const errorLogin = document.getElementById("errorLogin");
+    if (error === "login" && modalLogin && errorLogin) {
+      errorLogin.classList.remove("d-none");
+      modalLogin.show();
+    }
+
+    if (success === "recuperar" && modalLogin) {
+      alert("Contraseña actualizada correctamente.");
+      modalLogin.show();
+    }
+
+    // Modal Eliminar cuenta
+    const eliminarModalEl = document.getElementById("modalEliminarCuenta");
+    const modalEliminar = eliminarModalEl ? new bootstrap.Modal(eliminarModalEl) : null;
+    if (error === "eliminar" && modalEliminar) {
+      modalEliminar.show();
+    }
+
+    // Modal Recuperar contraseña
+    const recuperarModalEl = document.getElementById("modalRecuperarContrasena");
+    const modalRecuperar = recuperarModalEl ? new bootstrap.Modal(recuperarModalEl) : null;
+    const errorCorreo = document.getElementById("errorRecuperarCorreo");
+    const errorContrasena = document.getElementById("errorRecuperarContrasena");
+    const errorCoincidencia = document.getElementById("errorRecuperarCoincidencia");
+
+    if (modalRecuperar) {
+      if (error === "recuperarCorreo" && errorCorreo) {
+        errorCorreo.classList.remove("d-none");
+        modalRecuperar.show();
+      } else if (error === "recuperarContrasena" && errorContrasena) {
+        errorContrasena.classList.remove("d-none");
+        modalRecuperar.show();
+      } else if (error === "recuperarCoincidencia" && errorCoincidencia) {
+        errorCoincidencia.classList.remove("d-none");
+        modalRecuperar.show();
+      }
+    }
+
+    // Modal Registro
+    const registroModalEl = document.getElementById("modalRegistro");
+    const modalRegistro = registroModalEl ? new bootstrap.Modal(registroModalEl) : null;
+    const errorCorreoRegistro = document.getElementById("errorRegistroCorreo");
+    const errorCoincidenciaRegistro = document.getElementById("errorRegistroCoincidencia");
+
+    if (error === "registroCorreo" && modalRegistro && errorCorreoRegistro) {
+      errorCorreoRegistro.classList.remove("d-none");
+      modalRegistro.show();
+    } else if (error === "registroCoincidencia" && modalRegistro && errorCoincidenciaRegistro) {
+      errorCoincidenciaRegistro.classList.remove("d-none");
+      modalRegistro.show();
+    }
+
+    // Redirecciones a la misma página después del POST
+    const currentURL = window.location.pathname;
+    const redirectInputs = [
+      document.getElementById("redirectInput"),
+      document.getElementById("redirectEliminarCuenta"),
+      document.getElementById("redirectRecuperar")
+    ];
+    redirectInputs.forEach(input => {
+      if (input) input.value = currentURL;
+    });
+
+    // Modal Suscripción si no hay sesión ni se ha enviado antes
+    const modalSuscripcionEl = document.getElementById("modalSuscripcion");
+    if (!sesionIniciada && !suscripcionEnviada && !error && !success && modalSuscripcionEl) {
+      const modalSuscripcion = new bootstrap.Modal(modalSuscripcionEl);
+      modalSuscripcion.show();
+    }
+    
+    const modalResenaEl = document.getElementById("modalResena");
+    const redirectResenaInput = document.getElementById("redirectResena");
+
+    if (modalResenaEl && redirectResenaInput) {
+      modalResenaEl.addEventListener("show.bs.modal", () => {
+        redirectResenaInput.value = window.location.pathname + window.location.search;
+      });
+    }
+  });
+  
+  
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("campoBusqueda");
+  const lista = document.getElementById("sugerencias");
+
+  input.addEventListener("input", function () {
+    const query = input.value.trim();
+    if (query.length === 0) {
+      lista.innerHTML = "";
+      return;
+    }
+
+    fetch("/api/sugerencias?q=" + encodeURIComponent(query))
+      .then(response => response.json())
+      .then(data => {
+        lista.innerHTML = "";
+        data.forEach(item => {
+          const li = document.createElement("li");
+          li.className = "list-group-item list-group-item-action";
+          li.textContent = item.nombre;
+          li.addEventListener("click", () => {
+            window.location.href = `/producto/${item.id}`;
+          });
+          lista.appendChild(li);
+        });
+      });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !lista.contains(e.target)) {
+      lista.innerHTML = "";
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("campoBusqueda");
+  const lista = document.getElementById("sugerencias");
+
+  input.addEventListener("input", function () {
+    const query = input.value.trim();
+    if (query.length === 0) {
+      lista.innerHTML = "";
+      return;
+    }
+
+    fetch("/api/sugerencias?q=" + encodeURIComponent(query))
+      .then(response => response.json())
+      .then(data => {
+        lista.innerHTML = "";
+        data.forEach(item => {
+          const li = document.createElement("li");
+          li.className = "list-group-item list-group-item-action";
+          li.textContent = item.nombre;
+          li.addEventListener("click", () => {
+            window.location.href = `/producto/${item.id}`;
+          });
+          lista.appendChild(li);
+        });
+      });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !lista.contains(e.target)) {
+      lista.innerHTML = "";
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const botones = document.querySelectorAll(".btn-agregar");
+  const contador = document.getElementById("carrito-contador");
+
+  function actualizarContador() {
+    fetch("/carrito/contador")
+      .then(res => res.json())
+      .then(data => {
+        contador.textContent = data;
+      });
+  }
+
+  botones.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-id");
+
+      fetch("/carrito/agregar", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "id=" + encodeURIComponent(id)
+      })
+      .then(res => res.text())
+      .then(data => {
+        // Primero actualiza el contador con lo que responde el servidor (más preciso)
+        contador.textContent = data;
+
+        // Como refuerzo, volvemos a consultar el contador real (evita errores de caché o latencia)
+        actualizarContador();
+      });
+    });
+  });
+
+  // Al cargar la página, actualiza el contador
+  actualizarContador();
+});
+</script>
+
+	
+</body>
+</html>
