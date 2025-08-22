@@ -9,10 +9,12 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fb; /* fondo claro moderno */
+      color: #1e1e2f;
     }
     footer {
-      background-color: #1c1c1c;
-      color: white;
+      background-color: #0a0f1f; /* azul oscuro */
+      color: #e0e6f5; /* texto gris claro */
       padding: 40px 0;
     }
     footer ul {
@@ -21,82 +23,91 @@
     }
 
     footer ul li a {
-      color: #ccc;
+      color: #9bb0d4; /* azul claro */
       text-decoration: none;
     }
     footer ul li a:hover {
-      color: white;
+      color: #00e5ff; /* cian brillante */
     }
     .footer-bottom {
       padding-top: 20px;
       text-align: center;
-      border-top: 1px solid #333;
+      border-top: 1px solid #23395b; /* azul grisáceo */
       font-size: 14px;
     }
     .navbar-brand {
       font-weight: bold;
       font-size: 1.5rem;
+      color: #007bff; /* azul vibrante */
     }
     .nav-link {
       font-weight: 500;
+      color: #1e88e5; /* azul medio */
+    }
+    .nav-link:hover {
+      color: #00bcd4; /* cian brillante */
     }
     .btn-icono-buscar {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: #6c757d;
-    cursor: pointer;
-  }
-  .btn-pink {
-	  background-color: #f48fb1;
-	  color: white;
-	  font-weight: bold;
-	  border: none;
-	  transition: background-color 0.3s ease;
-	}
-	
-	.btn-pink:hover {
-	  background-color: #ec407a;
-	  color: white;
-	}
-	.flecha-gruesa {
-    display: inline-block;
-    width: 40px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-    background: transparent; 
-    border: none;            
-    padding: 0;              
-  }
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: #5a6a85; /* gris azulado */
+      cursor: pointer;
+    }
+    .btn-pink {
+      background-color: #2979ff; /* azul eléctrico */
+      color: white;
+      font-weight: bold;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-pink:hover {
+      background-color: #00bcd4; /* cian */
+      color: white;
+    }
+    .flecha-gruesa {
+      display: inline-block;
+      width: 40px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+      background: transparent; 
+      border: none;            
+      padding: 0;              
+    }
 
-  .flecha-gruesa::before {
-    content: '';
-    position: absolute;
-    left: 12px;
-    top: 7px;
-    width: 25px;
-    height: 16px;
-    background-color: black;
-  }
-  .flecha-gruesa::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 18px;
-    height: 30px;
-    background-color: black;
-    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    .flecha-gruesa::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 7px;
+      width: 25px;
+      height: 16px;
+      background-color: #2979ff; /* azul eléctrico */
+    }
+    .flecha-gruesa::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 30px;
+      background-color: #2979ff; /* azul eléctrico */
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
     }
     
     #sugerencias .list-group-item {
       cursor: pointer;
+      background: #f0f4ff;
     }
-  </style>
+    #sugerencias .list-group-item:hover {
+      background: #dce9ff;
+    }
+</style>
+
 </head>
 
 <!-- Modal de Cotización -->
