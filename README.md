@@ -8,5 +8,6 @@
 
 - Abel Vargas
 
-##Ideas
--Agregar un ejecutor para que el profesor pueda desde el github cargar la pagina desde el mismo repositorio
+## Ideas
+- Agregar un ejecutor para que el profesor pueda, desde el repositorio en GitHub, cargar la página directamente.
+
