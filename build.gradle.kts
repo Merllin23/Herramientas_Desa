@@ -7,6 +7,7 @@ plugins {
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
+// para que funcione en cualquier version de java
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
@@ -21,6 +22,7 @@ repositories {
     mavenCentral()
 }
 
+//dependencis, thymeleaf, base de datos, seguridad, etc.
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-web")
