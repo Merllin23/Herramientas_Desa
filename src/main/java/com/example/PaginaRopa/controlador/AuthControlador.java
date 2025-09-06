@@ -8,7 +8,7 @@ public class AuthControlador {
 
     @GetMapping("/login")
     public String login() {
-        // Retorna la página principal (index.html) donde tienes el modal de login
+        // Retorna la página principal (index.html)
         return "index";
     }
 }
