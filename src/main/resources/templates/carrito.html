@@ -327,16 +327,16 @@
           </div>
 
           <!-- Calificación -->
-          <div class="mb-3">
-            <label for="estrellas" class="form-label" th:text="#{resena.calificacion}">Calificación</label>
-            <select class="form-select rounded-pill" name="estrellas" required>
-              <option value="1">★☆☆☆☆</option>
-              <option value="2">★★☆☆☆</option>
-              <option value="3">★★★☆☆</option>
-              <option value="4">★★★★☆</option>
-              <option value="5">★★★★★</option>
-            </select>
-          </div>
+			<div class="mb-3">
+			  <label for="estrellas" class="form-label fw-bold" th:text="#{resena.calificacion}">Calificación</label>
+			  <select class="form-select rounded-pill shadow-sm border-primary" name="estrellas" required>
+			    <option value="1">⭐☆☆☆☆ Muy mala</option>
+			    <option value="2">⭐⭐☆☆☆ Mala</option>
+			    <option value="3">⭐⭐⭐☆☆ Regular</option>
+			    <option value="4">⭐⭐⭐⭐☆ Buena</option>
+			    <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+			  </select>
+			</div>
 
           <!-- Comentario -->
           <div class="mb-3">
