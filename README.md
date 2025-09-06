@@ -9,6 +9,11 @@
 - Abel Vargas
 
 ## Ideas
+- Agregar un ejecutor para que el profesor pueda, desde el repositorio en GitHub, cargar la página directamente.
+- Incluir instrucciones claras de cómo correr el proyecto en local con Gradle.
+- Añadir badges (por ejemplo, “Build with Gradle”, estado del build, etc.) para hacer el README más visual.
+- Preparar un ejemplo de uso o captura de pantalla para mostrar el resultado al ejecutar la app.
+
 1. Agregar un ejecutor desde GitHub
 
 Actualmente, para probar el proyecto es necesario descargarlo y ejecutarlo de manera local. Una mejora interesante sería configurar un workflow en GitHub Actions que permita ejecutar el proyecto directamente desde el repositorio. Esto le daría al profesor y a cualquier persona interesada la posibilidad de ver cómo funciona la aplicación sin necesidad de instalar dependencias adicionales en su máquina.
@@ -142,4 +147,5 @@ DetallePedido: id, idPedido, idProducto, cantidad, subtotal.
 
 
 5. Confirma pedido → se guarda en BD.
+6. 
 
