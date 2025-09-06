@@ -147,5 +147,3 @@ DetallePedido: id, idPedido, idProducto, cantidad, subtotal.
 
 
 5. Confirma pedido → se guarda en BD.
-6. 
-
