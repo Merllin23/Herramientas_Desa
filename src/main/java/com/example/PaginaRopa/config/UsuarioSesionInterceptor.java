@@ -34,7 +34,7 @@ public class UsuarioSesionInterceptor implements HandlerInterceptor {
             Optional<Usuario> optionalUsuario = usuarioRepositorio.findByCorreo(correo);
             if (optionalUsuario.isPresent()) {
                 Usuario usuario = optionalUsuario.get();
-                request.getSession().setAttribute("usuario", usuario); //  usuario real
+                request.getSession().setAttribute("usuario", usuario);
                 System.out.println("Usuario autenticado: " + usuario.getNombre());
             } else {
                 System.out.println("No se encontró el usuario con correo: " + correo);

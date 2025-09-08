@@ -47,7 +47,7 @@ public class UsuarioControlador {
         nuevo.setNombre(nombre.trim());
         nuevo.setApellido(apellido.trim());
         nuevo.setCorreo(correo);
-        nuevo.setContrasena(passwordEncoder.encode(contrasena)); // 🔐 Encriptar
+        nuevo.setContrasena(passwordEncoder.encode(contrasena));
 
         usuarioRepositorio.save(nuevo);
         session.setAttribute("usuario", nuevo);
