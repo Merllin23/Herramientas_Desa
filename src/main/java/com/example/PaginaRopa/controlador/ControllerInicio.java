@@ -1,4 +1,4 @@
-package com.example.PaginaRopa;
+package com.example.PaginaRopa.controlador;
 
 import java.util.List;
 
