@@ -186,9 +186,9 @@
         </div>
 
         <!-- Mensaje de error -->
-        <div id="errorLogin" class="alert alert-danger text-center rounded-pill py-2 small d-none">
-          <span th:text="#{login.errorCredenciales}">Correo o contraseña incorrectos.</span>
-        </div>
+		  <div id="errorLogin" class="alert alert-warning text-center rounded-pill py-2 small d-none">
+			  <span th:text="#{login.errorAcceso}">Los datos ingresados no son validos</span>
+		  </div>
 
         <!-- Formulario de login -->
         <form th:action="@{/login}" method="post" class="flex-grow-1 d-flex flex-column justify-content-center">
