@@ -469,22 +469,23 @@
 		      </th:block>
 		
 		      <!-- Si el usuario NO está logueado -->
-		      <th:block th:if="${session.usuario == null}">
-		        <li>
-		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin" 
-		             th:text="#{perfil.iniciarSesion}">Iniciar sesion</a>
-		        </li>
-		        <li>
-		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" 
-		             th:text="#{perfil.crearCuenta}">Crear cuenta</a>
-		        </li>
-		        <li>
-		          <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalCotizacion" 
-		             th:text="#{perfil.hacerCotizacion}">Hacer cotizacion</a>
-		        </li>
-		      </th:block>
-		    </ul>
-		  </div>
+				<th:block th:if="${session.usuario == null}">
+				  <li>
+				    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin" 
+				       th:text="#{perfil.iniciarSesion}">Acceder</a>
+				  </li>
+				  <li>
+				    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" 
+				       th:text="#{perfil.crearCuenta}">Registrarse</a>
+				  </li>
+				  <li>
+				    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalCotizacion" 
+				       th:text="#{perfil.hacerCotizacion}">Solicitar cotización</a>
+				  </li>
+				</th:block>
+				</ul>
+				</div>
+
 		
 		  <!-- Icono del carrito -->
 		<a href="/carrito" class="text-dark fs-5 position-relative" title="Carrito">
