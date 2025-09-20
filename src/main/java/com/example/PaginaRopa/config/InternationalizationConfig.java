@@ -18,7 +18,8 @@ public class InternationalizationConfig implements WebMvcConfigurer {
     @Bean
     public LocaleResolver localeResolver() {
         CookieLocaleResolver slr = new CookieLocaleResolver();
-        slr.setDefaultLocale(new Locale("es")); 
+        slr.setDefaultLocale(new Locale("es"));
+        slr.setCookieMaxAge(3600); // aunque es obsoleta es para probar que haya un limite de guardado de esta cookie
         return slr;
     }
 
@@ -31,6 +32,7 @@ public class InternationalizationConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+
         registry.addInterceptor(localeChangeInterceptor());
     }
 
