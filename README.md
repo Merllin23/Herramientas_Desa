@@ -142,6 +142,14 @@ DetallePedido: id, idPedido, idProducto, cantidad, subtotal.
 
 3. Agrega producto al carrito → revisa total.
 
+---
+
+
+### Conflictos y Resolución
+Los **conflictos** en Git ocurren cuando dos cambios afectan la misma parte del código.  
+Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
+
+
 
 4. Pasa al checkout → llena datos de envío y pago.
 
