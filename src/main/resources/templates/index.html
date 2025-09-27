@@ -439,14 +439,21 @@
 	</div>
 	
 	<section class="container my-5 py-5 text-center">
-	  <h2 class="mb-3 display-5 fw-bold" th:text="#{nosotros.titulo}">Nosotros</h2>
-	  <div class="mx-auto mb-4" style="width: 80px; height: 3px; background-color: #e0e0e0; border-radius: 2px;"></div>
-	  <p class="mx-auto fs-5" style="max-width: 700px;" th:text="#{nosotros.descripcion}">
-	    Somos una tienda online dedicada a ofrecer lo mejor de la moda actual.
-	    Creemos que vestirse bien no tiene por que ser caro, por eso te traemos productos
-	    modernos, comodos y accesibles para que te sientas bien todos los días.
-	  </p>
+  <div class="p-5 rounded-4 shadow-sm" style="background: linear-gradient(135deg, #f9f9f9, #ffffff);">
+    
+    <!-- Título con un detalle decorativo -->
+    <h2 class="mb-3 display-5 fw-bold text-primary" th:text="#{nosotros.titulo}">
+      Nosotros
+    </h2>
+    <div class="mx-auto mb-4" style="width: 100px; height: 4px; background: #0d6efd; border-radius: 5px;"></div>
+	<!-- Texto descriptivo -->
+    <p class="mx-auto fs-5 text-muted mb-4" style="max-width: 750px;" th:text="#{nosotros.descripcion}">
+      Somos una tienda online dedicada a ofrecer lo mejor de la moda actual.
+      Creemos que vestirse bien no tiene por qué ser caro, por eso te traemos productos
+      modernos, cómodos y accesibles para que te sientas bien todos los días.
+    </p>
 	</section>
+
   </main>
   
   <footer>
