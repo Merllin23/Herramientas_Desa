@@ -1,5 +1,6 @@
 # Proyecto: Aplicación de E-Commerce
 
+# Prueba de versiones
 
 ## Integrantes
 
@@ -85,9 +86,34 @@ Se está evaluando implementar **GitHub Actions** para que el proyecto pueda eje
 * **Revisiones de código**: los PRs deben ser aprobados antes de fusión.
 * **Resolución de conflictos**: se resuelven en la rama del PR antes de integrarse.
 
+
 Este flujo asegura control de calidad, trazabilidad y colaboración responsable.
+=======
+---
+
+
+### Conflictos y Resolución
+Los **conflictos** en Git ocurren cuando dos cambios afectan la misma parte del código.  
+Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
+
 
 ---
 
 Los **conflictos** ocurren cuando dos cambios afectan la misma parte del código.
 Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
+=======
+5. Confirma pedido → se guarda en BD.
+
+
+### Buenas Prácticas de Colaboración
+
+Para asegurar un flujo de trabajo organizado y de calidad, hemos implementado las siguientes prácticas:
+
+- **Main protegido**: la rama principal no acepta commits directos, evitando errores y cambios accidentales.  
+- **Pull Requests (PRs)**: todos los cambios deben realizarse en ramas individuales y luego enviarse mediante un PR hacia `main`.  
+- **Revisiones de código**: los PRs deben ser revisados y aprobados antes de fusionarse, fomentando el trabajo en equipo y la detección temprana de problemas.  
+- **Resolución de conflictos**: en caso de conflictos, estos se resuelven en la rama del PR antes de la fusión.  
+
+Este flujo asegura colaboración responsable, control de calidad y trazabilidad de todos los cambios en el proyecto.
+
+
