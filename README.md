@@ -1,6 +1,6 @@
 ## Herramientas de Desarollo
 
-# Prueba de versiones(Version 1)
+# Prueba de versiones
 
 ### Intregrandes:
 
