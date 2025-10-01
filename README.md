@@ -1,147 +1,94 @@
-## Herramientas de Desarollo
+# Proyecto: Aplicación de E-Commerce
 
 # Prueba de versiones
 
-### Intregrandes:
+## Integrantes
 
-- Patrick Calderon
-
-- Abel Vargas
-
-## Ideas
-- Agregar un ejecutor para que el profesor pueda, desde el repositorio en GitHub, cargar la página directamente.
-- Incluir instrucciones claras de cómo correr el proyecto en local con Gradle.
-- Añadir badges (por ejemplo, “Build with Gradle”, estado del build, etc.) para hacer el README más visual.
-- Preparar un ejemplo de uso o captura de pantalla para mostrar el resultado al ejecutar la app.
-
-1. Agregar un ejecutor desde GitHub
-
-Actualmente, para probar el proyecto es necesario descargarlo y ejecutarlo de manera local. Una mejora interesante sería configurar un workflow en GitHub Actions que permita ejecutar el proyecto directamente desde el repositorio. Esto le daría al profesor y a cualquier persona interesada la posibilidad de ver cómo funciona la aplicación sin necesidad de instalar dependencias adicionales en su máquina.
-Además, con esta configuración estaríamos aplicando prácticas de integración continua (CI/CD), lo que no solo mejora la experiencia del usuario, sino que también demuestra competencias en entornos de desarrollo modernos y automatización.
-
-2. Instrucciones claras de ejecución local con Gradle
-
-Aunque Gradle es una herramienta bastante estándar en proyectos Java, no todas las personas que revisen el proyecto necesariamente estarán familiarizadas con su uso. Por ello, es importante añadir un apartado en el README con instrucciones claras y detalladas sobre cómo clonar el repositorio, compilar el código y ejecutar la aplicación con Gradle.
-Esto asegura que cualquier usuario, sin importar su nivel de experiencia, pueda correr el programa sin contratiempos. También es una buena práctica de documentación, ya que permite que el proyecto sea reproducible y accesible para nuevos desarrolladores en el futuro.
-
-3. Incluir badges en el README
-
-El README puede enriquecerse con el uso de badges (insignias visuales) que aporten información rápida sobre el estado del proyecto. Por ejemplo, se pueden incluir badges de:
-
-Estado de la compilación (Build passing/failing).
-
-Versión de Gradle utilizada.
-
-Cobertura de pruebas unitarias.
-
-Lenguaje o tecnologías empleadas.
-
-Estos elementos no solo hacen que el README sea más atractivo visualmente, sino que también transmiten un aire de profesionalismo y transparencia, mostrando de un vistazo el estado actual del proyecto y sus tecnologías principales.
-
-
-
-1. Estructura General de la App
-
-Pantalla de inicio (Home):
-
-Banner con promociones.
-
-Categorías destacadas (laptops, accesorios, componentes, periféricos).
-
-Productos recomendados o más vendidos.
-
-
-Autenticación de usuarios:
-
-Registro (correo, Google, Facebook).
-
-Inicio de sesión.
-
-Perfil de usuario.
-
-
-Gestión de productos:
-
-Catálogo de productos con búsqueda y filtros (precio, marca, categoría).
-
-Vista de detalle del producto (nombre, descripción, imágenes, precio, stock, reseñas).
-
-Botón de “Agregar al carrito”.
-
-
-Carrito de compras:
-
-Listado de productos añadidos.
-
-Actualizar cantidad o eliminar producto.
-
-Calcular subtotal, IGV, total.
-
-
-Proceso de compra (Checkout):
-
-Datos de envío (dirección, teléfono, distrito).
-
-Selección de método de pago (tarjeta, Yape/Plin, contraentrega).
-
-Confirmación de pedido.
-
-
-Gestión de pedidos:
-
-Ver historial de pedidos.
-
-Estado del pedido (pendiente, en camino, entregado).
-
-
-
+* Patrick Calderon
+* Abel Vargas
 
 ---
 
-🔹 2. Módulos de Administración (Backoffice)
+## Herramientas de Desarrollo
 
-Gestión de usuarios (CRUD).
-
-Gestión de productos (CRUD).
-
-Gestión de categorías.
-
-Gestión de pedidos (ver, actualizar estados).
-
-Reportes (ventas, stock).
-
-
+* Lenguaje principal: Java
+* Gestor de dependencias: **Gradle**
+* Base de datos: PostgreSQL 
+* Control de versiones: Git + GitHub
 
 ---
 
-🔹 3. Base de Datos (Ejemplo en PostgreSQL/MySQL)
+## Ejecución del Proyecto
 
-Tablas principales:
+### Ejecución Local con Gradle
 
-Usuario: id, nombre, correo, contraseña, rol, dirección, teléfono.
+1. Clonar el repositorio:
 
-Producto: id, nombre, descripción, precio, stock, categoría, marca, númeroSerie.
+   ```bash
+   git clone https://github.com/usuario/repositorio.git
+   cd repositorio
+   ```
+2. Compilar y ejecutar:
 
-Categoría: id, nombre.
+   ```bash
+   ./gradlew build
+   ./gradlew run
+   ```
+3. Abrir la aplicación en el navegador en `http://localhost:8080`
 
-Pedido: id, idUsuario, fecha, total, estado.
+### Ejecución desde GitHub (propuesta futura)
 
-DetallePedido: id, idPedido, idProducto, cantidad, subtotal.
-
-
+Se está evaluando implementar **GitHub Actions** para que el proyecto pueda ejecutarse directamente desde el repositorio, aplicando principios de CI/CD.
 
 ---
 
-🔹 4. Flujo del Usuario
+## Ideas de Mejora
+
+* Configurar un ejecutor en GitHub Actions para pruebas en línea.
+* Añadir badges (build, versión de Gradle, cobertura de pruebas).
+* Incluir ejemplos de uso o capturas de pantalla.
+
+---
+
+## Estructura General de la App
+
+### Módulo de Usuario
+
+* **Pantalla de inicio**: banner, categorías destacadas, productos recomendados.
+* **Autenticación**: registro (correo/Google/Facebook), inicio de sesión, perfil de usuario.
+* **Gestión de productos**: catálogo con filtros, vista de detalle, botón “Agregar al carrito”.
+* **Carrito de compras**: listado, actualización de cantidades, cálculo subtotal/IGV/total.
+* **Checkout**: datos de envío, métodos de pago (tarjeta, Yape/Plin, contraentrega), confirmación de pedido.
+* **Pedidos**: historial, estado (pendiente, en camino, entregado).
+
+### Módulo de Administración
+
+* Gestión de usuarios (CRUD).
+* Gestión de productos (CRUD).
+* Gestión de categorías.
+* Gestión de pedidos y actualización de estados.
+* Reportes de ventas y stock.
+
+## Flujo del Usuario
 
 1. Usuario abre la app → ve productos destacados.
-
-
-2. Busca o filtra por categoría → selecciona producto.
-
-
+2. Busca/filtra productos → selecciona uno.
 3. Agrega producto al carrito → revisa total.
+4. Realiza checkout → llena datos de envío y pago.
+5. Confirma pedido → se guarda en BD.
 
+---
+
+## Buenas Prácticas de Colaboración
+
+* **Main protegido**: no se aceptan commits directos.
+* **Pull Requests (PRs)**: todos los cambios se realizan en ramas individuales y se integran vía PR.
+* **Revisiones de código**: los PRs deben ser aprobados antes de fusión.
+* **Resolución de conflictos**: se resuelven en la rama del PR antes de integrarse.
+
+
+Este flujo asegura control de calidad, trazabilidad y colaboración responsable.
+=======
 ---
 
 
@@ -150,10 +97,11 @@ Los **conflictos** en Git ocurren cuando dos cambios afectan la misma parte del 
 Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
 
 
+---
 
-4. Pasa al checkout → llena datos de envío y pago.
-
-
+Los **conflictos** ocurren cuando dos cambios afectan la misma parte del código.
+Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
+=======
 5. Confirma pedido → se guarda en BD.
 
 
@@ -167,4 +115,5 @@ Para asegurar un flujo de trabajo organizado y de calidad, hemos implementado la
 - **Resolución de conflictos**: en caso de conflictos, estos se resuelven en la rama del PR antes de la fusión.  
 
 Este flujo asegura colaboración responsable, control de calidad y trazabilidad de todos los cambios en el proyecto.
+
 
