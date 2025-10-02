@@ -117,3 +117,27 @@ Para asegurar un flujo de trabajo organizado y de calidad, hemos implementado la
 Este flujo asegura colaboración responsable, control de calidad y trazabilidad de todos los cambios en el proyecto.
 
 
+
+###Configuracion del entorno
+- java version: 21
+- -IDE recomendado: IntelliJ
+- Plugins Gradle: Spring-boot
+
+###Estructura 
+src/
+ ├─ main/
+ │   ├─ java/com/ecommerce/app/
+ │   │   ├─ controllers/
+ │   │   ├─ services/
+ │   │   ├─ repositories/
+ │   │   └─ models/
+ │   └─ resources/
+ │       ├─ application.properties
+ │       └─ static/ (CSS, JS, imágenes)
+ └─ test/java/com/ecommerce/app/
+
+###Seguridad
+-verificacion con springboot
+cifrado de contraseñas
+manejo de roles(usuario/admin)
+
