@@ -141,3 +141,14 @@ src/
 cifrado de contraseñas
 manejo de roles(usuario/admin)
 
+###IDEAS DE MEJORA
+-Seguridad: implementar JWT para versiones seguras y cifrado de contraseñas
+-Escalabilidad:estructurar la app apra poder migrarlar facilmente a la nube
+-Documentacion API: Usar swagger o openAI para exponer y probar endpoints
+-Pruebas automatizadas:añadir JUnit para testear controladores
+
+
+###Flujo de usuarios
+-El diseño buscar ser intuitivo y rapido
+-La integracion con metodos de pago locales como YAPE / PLIN
+-El historial de pedidos no solo ayuda al usuario sino que tambien genera fidelizacion y confianza
