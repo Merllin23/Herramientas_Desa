@@ -47,7 +47,9 @@ Se está evaluando implementar **GitHub Actions** para que el proyecto pueda eje
 * Configurar un ejecutor en GitHub Actions para pruebas en línea.
 * Añadir badges (build, versión de Gradle, cobertura de pruebas).
 * Incluir ejemplos de uso o capturas de pantalla.
-
+* Configurar CI/CD para despliegue automático (Heroku, Vercel, Docker Hub, etc.).
+* Mejorar la interfaz con temas oscuros/claros.
+  
 ---
 
 ## Estructura General de la App
