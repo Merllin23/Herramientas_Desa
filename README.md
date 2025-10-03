@@ -141,3 +141,14 @@ src/
 cifrado de contraseñas
 manejo de roles(usuario/admin)
 
+###Practicas de colaboracion
+
+-Convecion de codigo: manejamos java IntelliJ para mantener uniformidad
+-Commits semanticos: formato estandar
+-Revisiones rotativas: cada integrante revisa el código del otro para aprendizaje cruzado.
+
+###Modulo de administracion extra
+-Gestion de promociones y descuentos
+-Panel analitico: metricas de ventas, ususarios activos, productos mas vendidos.
+-Alertas automaticas de stock: notificaciones al administrador cuando un producto este por agotarse.
+
