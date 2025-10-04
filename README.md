@@ -154,3 +154,12 @@ manejo de roles(usuario/admin)
 -El diseño buscar ser intuitivo y rapido
 -La integracion con metodos de pago locales como YAPE / PLIN
 -El historial de pedidos no solo ayuda al usuario sino que tambien genera fidelizacion y confianza
+
+###Sistema de Control de Versiones en la Nube
+
+El trabajo colaborativo con sistemas de versiones en la nube nos permite que varios de los usuarios particicpen| en nuestro proyecto
+de manera ordenada y adecuada. Las herramientas nos ayudan a  almacenar el historial de cambios y nos mostrara
+ quien realizo cada modificación y en que momento.
+
+ Ademas nos dan ventajas como la segurida de datos al acceso remoto y la sincronizacion automatica.
+ Lo que se nos hace ideal para trabajar en conjunto.
