@@ -101,11 +101,6 @@ Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
 
 ---
 
-Los **conflictos** ocurren cuando dos cambios afectan la misma parte del código.
-Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
-=======
-5. Confirma pedido → se guarda en BD.
-
 
 ### Buenas Prácticas de Colaboración
 
