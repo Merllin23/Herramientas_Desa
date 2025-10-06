@@ -27,6 +27,13 @@ A continuación se muestran algunas imágenes de la aplicación en funcionamient
 ### 🖥️ Pantalla principal
 <img width="1910" height="886" alt="image" src="https://github.com/user-attachments/assets/65bcb269-3382-4820-a655-96de5f077512" />
 
+### 🖥️ Pantallas de categorias(Mujer, Hombre, Infantil)
+<img width="1350" height="681" alt="image" src="https://github.com/user-attachments/assets/183a7229-90a5-4364-960c-21f39e78250c" />
+
+<img width="1327" height="661" alt="image" src="https://github.com/user-attachments/assets/2e41436b-ea4f-488f-a648-f5dd4f996f07" />
+
+<img width="1336" height="660" alt="image" src="https://github.com/user-attachments/assets/9d51dc16-700c-41a5-9b3d-c8b45cbebf6b" />
+
 
 ### Ejecución Local con Gradle
 
