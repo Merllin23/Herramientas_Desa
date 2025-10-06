@@ -20,6 +20,14 @@
 
 ## Ejecución del Proyecto
 
+## 📸 Capturas de la ejecución
+
+A continuación se muestran algunas imágenes de la aplicación en funcionamiento:
+
+### 🖥️ Pantalla principal
+<img width="1910" height="886" alt="image" src="https://github.com/user-attachments/assets/65bcb269-3382-4820-a655-96de5f077512" />
+
+
 ### Ejecución Local con Gradle
 
 1. Clonar el repositorio:
