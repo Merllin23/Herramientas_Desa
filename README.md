@@ -34,6 +34,13 @@ A continuación se muestran algunas imágenes de la aplicación en funcionamient
 
 <img width="1336" height="660" alt="image" src="https://github.com/user-attachments/assets/9d51dc16-700c-41a5-9b3d-c8b45cbebf6b" />
 
+### 🖥️ Pantalla de Contacto
+<img width="1336" height="675" alt="image" src="https://github.com/user-attachments/assets/2f5ab198-e6e2-4c4e-84a8-ee7f6468158e" />
+
+### Internacionalizacion(funciona en todas las pantallas)
+
+<img width="1343" height="675" alt="image" src="https://github.com/user-attachments/assets/bb674d4b-1684-478d-986d-c10b5cc7e31e" />
+
 
 ### Ejecución Local con Gradle
 
