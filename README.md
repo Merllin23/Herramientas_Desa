@@ -200,3 +200,15 @@ manejo de roles(usuario/admin)
 ###CONTROL DE VERSIONES EN LA NUBE
 Trabajar con sistemas de control de versiones en la nube permite colaborar de forma organizada y segura, guardando el historial de cambios y mostrando quién modificó qué y cuándo.
 Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo.
+
+ Contribución: se implementó la estructura base del proyecto Spring Boot para la tienda de ropa.
+Contribución: se configuró la conexión a la base de datos y la capa de persistencia con JPA.
+Contribución: se desarrolló el controlador para gestionar los productos (CRUD completo).
+Contribución: se agregó validación de datos al registrar nuevos productos y clientes.
+Contribución: se implementó el endpoint para listar los productos disponibles en la tienda.
+Contribución: se añadió la lógica de negocio para calcular el stock y los precios con descuento.
+Contribución: se configuró Swagger para documentar los servicios REST del proyecto.
+Contribución: se realizaron pruebas de integración con Postman para verificar el correcto funcionamiento del backend.
+Contribución: se mejoró la estructura del proyecto siguiendo el patrón MVC y buenas prácticas de Spring Boot.
+
+
