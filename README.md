@@ -8,28 +8,28 @@
 * Abel Vargas
 
 ---
-##1. Diseño general:
+## 1. Diseño general:
 El boceto presenta un estilo moderno y limpio, ideal para una tienda de ropa. La distribución en secciones (cabecera, catálogo, y pie de página) es clara y fácil de navegar. Esto ayuda a que los usuarios encuentren rápido lo que buscan, algo clave en e-commerce.
 
-##2. Encabezado (Header):
+## 2. Encabezado (Header):
 
 Muestra bien el nombre o logotipo de la tienda, y los enlaces principales (Inicio, Productos, Contacto, etc.).
 
 Podrías agregar un buscador en la parte superior, lo cual mejora la experiencia del usuario cuando la tienda crezca.
 
-##3. Sección principal (Catálogo):
+## 3. Sección principal (Catálogo):
 
 Las imágenes de ropa están bien distribuidas.
 
 Se recomienda usar fotos con fondo blanco o neutro para destacar las prendas.
 
 Cada producto debe tener su nombre, precio y botón de compra o detalles.
-##4. Colores y estilo:
+## 4. Colores y estilo:
 
 La paleta es equilibrada; sin embargo, podrías elegir una combinación de 2 a 3 colores que representen tu marca (por ejemplo: beige, negro y dorado para algo elegante; o azul y blanco para algo moderno).
 
 Asegúrate de mantener una tipografía uniforme y legible.
-##5. Pie de página (Footer):
+## 5. Pie de página (Footer):
 
 Añadir enlaces a redes sociales, términos y condiciones, o una pequeña sección “Sobre nosotros” reforzaría la confianza del cliente.
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b329e9c0-114a-42d1-bfb5-2928d0c0106e" />
