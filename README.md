@@ -174,54 +174,54 @@ src/
  │       └─ static/ (CSS, JS, imágenes)
  └─ test/java/com/ecommerce/app/
 
-Seguridad
+🔐 Seguridad
 
-Verificación de autenticación mediante Spring Boot.
+Se implementó la autenticación de usuarios mediante el framework Spring Boot.
 
-Cifrado de contraseñas para proteger las credenciales de los usuarios.
+Se aplicó el cifrado de contraseñas para garantizar la confidencialidad de las credenciales.
 
-Gestión de roles (usuario y administrador) para controlar los niveles de acceso.
+Se gestionaron roles de acceso (usuario y administrador) para establecer distintos niveles de permisos dentro del sistema.
 
 💡 Propuestas de Mejora
 
-Seguridad: incorporar JWT para manejar sesiones seguras y reforzar el cifrado de contraseñas.
+Seguridad: incorporar el uso de JWT (JSON Web Tokens) para fortalecer la protección de las sesiones y mantener el cifrado de datos sensibles.
 
-Escalabilidad: preparar la aplicación para una migración sencilla a la nube.
+Escalabilidad: adaptar la aplicación para una futura migración a entornos en la nube, facilitando su crecimiento y mantenimiento.
 
-Programación: integrar Swagger u OpenAPI para facilitar la prueba y visualización de los endpoints.
+Programación: integrar herramientas como Swagger o OpenAPI que permitan probar y visualizar los endpoints de manera más eficiente.
 
-Pruebas: aplicar JUnit para validar el correcto funcionamiento de los controladores.
+Pruebas: implementar JUnit para realizar tests automatizados que aseguren el correcto funcionamiento de los controladores.
 
 👥 Flujo de Usuarios
 
-Implementar un diseño intuitivo y ágil para mejorar la experiencia del usuario.
+Diseñar una interfaz rápida e intuitiva, centrada en la experiencia del usuario.
 
-Incluir métodos de pago locales como Yape o Plin.
+Incorporar métodos de pago locales como Yape o Plin para mayor comodidad.
 
-Mostrar el historial de pedidos para generar confianza y transparencia en las compras.
+Mostrar un historial de pedidos, brindando transparencia y confianza al cliente durante su proceso de compra.
 
 ☁️ Control de Versiones en la Nube
 
-El uso de sistemas de control de versiones en la nube permite colaborar de forma ordenada y segura, manteniendo un registro histórico de los cambios y quién los realizó.
-Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo y la actualización continua del proyecto.
+El empleo de plataformas de control de versiones en la nube permite mantener un trabajo colaborativo, seguro y estructurado, conservando el historial de cambios realizados por cada integrante del equipo.
+Asimismo, proporciona sincronización automática y acceso remoto, optimizando la cooperación y el desarrollo continuo del proyecto.
 
 🧩 Contribuciones Realizadas
 
-Se implementó la estructura base del proyecto con Spring Boot para la tienda de ropa.
+Creación de la estructura inicial del proyecto en Spring Boot para la tienda de ropa.
 
-Se configuró la conexión a la base de datos y la capa de persistencia con JPA.
+Configuración de la conexión a la base de datos y la capa de persistencia mediante JPA.
 
-Se desarrolló el controlador CRUD de productos.
+Desarrollo del controlador principal con operaciones CRUD para los productos.
 
-Se añadieron validaciones de datos al registrar productos y clientes.
+Inclusión de validaciones de datos en el registro de productos y clientes.
 
-Se creó un endpoint para listar los productos disponibles.
+Implementación de un endpoint para listar productos disponibles.
 
-Se implementó la lógica de negocio para el cálculo de stock y descuentos.
+Desarrollo de la lógica de negocio para calcular stock y precios con descuento.
 
-Se configuró Swagger para la documentación de los servicios REST.
+Integración de Swagger para documentar y probar los servicios REST.
 
-Se realizaron pruebas de integración con Postman para verificar el funcionamiento del backend.
+Ejecución de pruebas de integración con Postman para comprobar la funcionalidad del backend.
 
-Se optimizó la estructura del proyecto aplicando el patrón MVC y las buenas prácticas de Spring Boot.
+Mejora de la estructura del proyecto, siguiendo el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
 
