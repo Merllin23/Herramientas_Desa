@@ -174,34 +174,54 @@ src/
  │       └─ static/ (CSS, JS, imágenes)
  └─ test/java/com/ecommerce/app/
 
-###Seguridad
--verificacion con springboot
-cifrado de contraseñas
-manejo de roles(usuario/admin)
+Seguridad
 
-###IDEAS DE MEJORA
--Seguridad:Implementar JWT para sesiones seguras y cifrado de contraseñas.
--Escalabilidad:Preparar la app para migrarla fácilmente a la nube.
--Programacion:Usar Swagger o OpenAPI para probar y visualizar los endpoints.
--Pruebas:Integrar JUnit para verificar el funcionamiento de los controladores.
+Verificación de autenticación mediante Spring Boot.
 
-###FLUJO DE USUARIOS
--Diseño intuitivo y rapido para mejorar la experiencia
--Integrar metodos locales como yape o plin
--El historial de pedidos refuerza la confianza
+Cifrado de contraseñas para proteger las credenciales de los usuarios.
 
-###CONTROL DE VERSIONES EN LA NUBE
-Trabajar con sistemas de control de versiones en la nube permite colaborar de forma organizada y segura, guardando el historial de cambios y mostrando quién modificó qué y cuándo.
-Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo.
+Gestión de roles (usuario y administrador) para controlar los niveles de acceso.
 
- Contribución: se implementó la estructura base del proyecto Spring Boot para la tienda de ropa.
-Contribución: se configuró la conexión a la base de datos y la capa de persistencia con JPA.
-Contribución: se desarrolló el controlador para gestionar los productos (CRUD completo).
-Contribución: se agregó validación de datos al registrar nuevos productos y clientes.
-Contribución: se implementó el endpoint para listar los productos disponibles en la tienda.
-Contribución: se añadió la lógica de negocio para calcular el stock y los precios con descuento.
-Contribución: se configuró Swagger para documentar los servicios REST del proyecto.
-Contribución: se realizaron pruebas de integración con Postman para verificar el correcto funcionamiento del backend.
-Contribución: se mejoró la estructura del proyecto siguiendo el patrón MVC y buenas prácticas de Spring Boot.
+💡 Propuestas de Mejora
 
+Seguridad: incorporar JWT para manejar sesiones seguras y reforzar el cifrado de contraseñas.
+
+Escalabilidad: preparar la aplicación para una migración sencilla a la nube.
+
+Programación: integrar Swagger u OpenAPI para facilitar la prueba y visualización de los endpoints.
+
+Pruebas: aplicar JUnit para validar el correcto funcionamiento de los controladores.
+
+👥 Flujo de Usuarios
+
+Implementar un diseño intuitivo y ágil para mejorar la experiencia del usuario.
+
+Incluir métodos de pago locales como Yape o Plin.
+
+Mostrar el historial de pedidos para generar confianza y transparencia en las compras.
+
+☁️ Control de Versiones en la Nube
+
+El uso de sistemas de control de versiones en la nube permite colaborar de forma ordenada y segura, manteniendo un registro histórico de los cambios y quién los realizó.
+Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo y la actualización continua del proyecto.
+
+🧩 Contribuciones Realizadas
+
+Se implementó la estructura base del proyecto con Spring Boot para la tienda de ropa.
+
+Se configuró la conexión a la base de datos y la capa de persistencia con JPA.
+
+Se desarrolló el controlador CRUD de productos.
+
+Se añadieron validaciones de datos al registrar productos y clientes.
+
+Se creó un endpoint para listar los productos disponibles.
+
+Se implementó la lógica de negocio para el cálculo de stock y descuentos.
+
+Se configuró Swagger para la documentación de los servicios REST.
+
+Se realizaron pruebas de integración con Postman para verificar el funcionamiento del backend.
+
+Se optimizó la estructura del proyecto aplicando el patrón MVC y las buenas prácticas de Spring Boot.
 
