@@ -8,27 +8,25 @@
 * Abel Vargas
 
 ---
-## 1. Diseño general:
-El boceto presenta un estilo moderno y limpio, ideal para una tienda de ropa. La distribución en secciones (cabecera, catálogo, y pie de página) es clara y fácil de navegar. Esto ayuda a que los usuarios encuentren rápido lo que buscan, algo clave en e-commerce.
+1. Diseño general
 
-## 2. Encabezado (Header):
+El diseño muestra una apariencia moderna, ordenada y atractiva, adecuada para una tienda de ropa. La organización por secciones (encabezado, catálogo y pie de página) facilita la navegación, permitiendo que los usuarios encuentren fácilmente los productos que buscan, lo cual es esencial en una plataforma de comercio electrónico.
 
-Muestra bien el nombre o logotipo de la tienda, y los enlaces principales (Inicio, Productos, Contacto, etc.).
+2. Encabezado (Header)
 
-Podrías agregar un buscador en la parte superior, lo cual mejora la experiencia del usuario cuando la tienda crezca.
+El encabezado presenta correctamente el nombre o logotipo de la tienda junto con los enlaces principales (Inicio, Productos, Contacto, etc.).
+Se sugiere incorporar un buscador en la parte superior para optimizar la experiencia del usuario, especialmente cuando el catálogo de productos aumente.
 
-## 3. Sección principal (Catálogo):
+3. Sección principal (Catálogo)
 
-Las imágenes de ropa están bien distribuidas.
+Las imágenes de los productos están bien organizadas, lo que aporta claridad visual.
+Se recomienda utilizar fondos blancos o neutros en las fotografías para resaltar mejor las prendas.
+Cada artículo debe incluir su nombre, precio y un botón de compra o ver detalles, para ofrecer una navegación más funcional.
 
-Se recomienda usar fotos con fondo blanco o neutro para destacar las prendas.
+4. Colores y estilo
 
-Cada producto debe tener su nombre, precio y botón de compra o detalles.
-## 4. Colores y estilo:
-
-La paleta es equilibrada; sin embargo, podrías elegir una combinación de 2 a 3 colores que representen tu marca (por ejemplo: beige, negro y dorado para algo elegante; o azul y blanco para algo moderno).
-
-Asegúrate de mantener una tipografía uniforme y legible.
+La paleta de colores es armoniosa y coherente, aunque sería ideal definir de dos a tres tonos principales que representen la identidad visual de la marca (por ejemplo, beige, negro y dorado para una imagen elegante; o azul y blanco para un estilo más moderno).
+Además, es importante mantener una tipografía uniforme y fácil de leer, lo que contribuye a una presentación más profesional.
 ## 5. Pie de página (Footer):
 
 Añadir enlaces a redes sociales, términos y condiciones, o una pequeña sección “Sobre nosotros” reforzaría la confianza del cliente.
