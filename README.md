@@ -195,31 +195,44 @@ manejo de roles(usuario/admin)
 -Integrar metodos locales como yape o plin
 -El historial de pedidos refuerza la confianza
 
-###CONTROL DE VERSIONES EN LA NUBE
-Trabajar con sistemas de control de versiones en la nube permite colaborar de forma organizada y segura, guardando el historial de cambios y mostrando quién modificó qué y cuándo.
-Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo.
+☁️ Control de Versiones en la Nube
 
- Contribución: se implementó la estructura base del proyecto Spring Boot para la tienda de ropa.
-Contribución: se configuró la conexión a la base de datos y la capa de persistencia con JPA.
-Contribución: se desarrolló el controlador para gestionar los productos (CRUD completo).
-Contribución: se agregó validación de datos al registrar nuevos productos y clientes.
-Contribución: se implementó el endpoint para listar los productos disponibles en la tienda.
-Contribución: se añadió la lógica de negocio para calcular el stock y los precios con descuento.
-Contribución: se configuró Swagger para documentar los servicios REST del proyecto.
-Contribución: se realizaron pruebas de integración con Postman para verificar el correcto funcionamiento del backend.
-Contribución: se mejoró la estructura del proyecto siguiendo el patrón MVC y buenas prácticas de Spring Boot.
+El uso de plataformas de control de versiones en la nube permite una colaboración estructurada y segura entre los miembros del equipo. Estas herramientas almacenan el historial de modificaciones, mostrando quién realizó cada cambio y en qué momento. Además, ofrecen sincronización automática y acceso remoto, lo que facilita el trabajo colaborativo y la continuidad del desarrollo del proyecto.
 
+Principales contribuciones al proyecto:
 
-## 🗣️ Comunicación y Coordinación del Equipo (Discord)
+Se estableció la estructura base del proyecto en Spring Boot para la tienda de ropa.
 
-Durante el desarrollo del proyecto se utilizó **Discord** como la principal herramienta de comunicación y coordinación del equipo.
+Se configuró la conexión con la base de datos y la capa de persistencia mediante JPA.
 
-### 💬 Objetivos del uso de Discord
+Se desarrolló el controlador CRUD completo para la gestión de productos.
 
-- **Comunicación en tiempo real:** permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.  
-- **Colaboración constante:** facilita la planificación diaria, asignación de tareas y seguimiento del progreso.  
-- **Canales temáticos:** se organizaron canales como `#frontend`, `#backend`, `#base-de-datos`, `#reuniones` y `#avisos` para mantener la información clara y ordenada.  
-- **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
-- **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+Se añadieron validaciones de datos al registrar nuevos productos y clientes.
+
+Se implementó un endpoint para listar los productos disponibles en la tienda.
+
+Se integró la lógica de negocio para el cálculo de stock y aplicación de descuentos.
+
+Se configuró Swagger para la documentación de los servicios REST.
+
+Se realizaron pruebas de integración con Postman para comprobar el correcto funcionamiento del backend.
+
+Se optimizó la arquitectura del proyecto aplicando el patrón MVC y las buenas prácticas de desarrollo con Spring Boot.
+
+🗣️ Comunicación y Coordinación del Equipo (Discord)
+
+Durante el desarrollo, Discord se utilizó como la herramienta principal para la comunicación y coordinación del equipo.
+
+💬 Propósitos del uso de Discord
+
+Interacción en tiempo real: permitió resolver dudas técnicas o de diseño de manera inmediata sin necesidad de reuniones presenciales.
+
+Colaboración continua: facilitó la planificación diaria, distribución de tareas y seguimiento del avance del proyecto.
+
+Canales organizados: se crearon canales temáticos como #frontend, #backend, #base-de-datos, #reuniones y #avisos, lo que ayudó a mantener una comunicación clara y ordenada.
+
+Reuniones virtuales: se llevaron a cabo videollamadas y revisiones de código para evaluar avances y coordinar entregas.
+
+Integración con GitHub: se configuraron notificaciones automáticas sobre commits, issues y pull requests en un canal específico, mejorando la sincronización del equipo.
 
 
