@@ -222,4 +222,17 @@ Durante el desarrollo del proyecto se utilizó **Discord** como la principal her
 - **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
 - **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
 
+🛠️ Sistemas de Seguimiento de Incidentes
+
+Los sistemas de seguimiento de incidentes son herramientas utilizadas para registrar, controlar y resolver errores, fallos o solicitudes que surgen durante el ciclo de vida de un proyecto de software. Permiten a los equipos mantener un control centralizado de problemas, garantizando una respuesta rápida y eficiente.
+
+💡 Objetivos principales
+
+Registrar y priorizar incidentes: cada error o solicitud se documenta con su nivel de urgencia y responsable asignado.
+
+Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de los problemas y colaborar en su solución.
+
+Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
+
+Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
 
