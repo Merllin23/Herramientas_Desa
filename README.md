@@ -222,4 +222,16 @@ Durante el desarrollo del proyecto se utilizó **Discord** como la principal her
 - **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
 - **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
 
+  Roles definidos:
+
+👑 Líder del proyecto
+
+💻 Desarrollador Backend
+
+🎨 Diseñador UI
+
+🧩 Tester / QA
+
+📊 Documentador
+
 
