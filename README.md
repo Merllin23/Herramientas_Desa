@@ -222,4 +222,20 @@ Durante el desarrollo del proyecto se utilizó **Discord** como la principal her
 - **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
 - **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
 
+🧠 Ejemplo práctico de organización en Discord
+
+Servidor del proyecto: “Sistema de Gestión XYZ”
+Canales creados:
+
+#general → anuncios y avisos del líder del equipo
+
+#frontend → discusiones de interfaz y Angular
+
+#backend → lógica del sistema y controladores Java
+
+#base-de-datos → consultas SQL y modelos
+
+#github-commits → notificaciones automáticas de push o pull request
+
+#soporte → dudas técnicas o configuración local
 
