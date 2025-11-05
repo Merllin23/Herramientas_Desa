@@ -236,3 +236,12 @@ Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y l
 
 Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
 
+🧩 Tecnologías Utilizadas
+Categoría	Herramientas / Frameworks
+Frontend	Angular, TypeScript, HTML5, CSS3, Bootstrap
+Backend	Node.js / Express (o Spring Boot si lo estás usando)
+Base de Datos	MySQL / PostgreSQL / Firebase
+Control de versiones	GitHub
+Comunicación y Organización	Discord, Trello, Notion
+Diseño y prototipado	Figma, Canva, Balsamiq
+
