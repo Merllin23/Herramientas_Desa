@@ -7,28 +7,72 @@
 * Patrick Calderon
 * Abel Vargas
 
+
+
+INTRODUCCION DEL PROYECTO
+El presente proyecto consiste en el desarrollo de una tienda virtual de ropa moderna, diseñada para ofrecer una experiencia de compra rapida, atractiva y segura.
+El objetivo principal es permitir a los usuarios explorar el catalogo digital de prendas, vizualisar precios, detalles y realizar compras en linea desde cualquier dispositivo.
+
+Este E-commerce fue creado utilizando IntelliJ IDEA como entorno y springboot como framework principal, lo que permite, una arquitectura escalable y segura.
+El proyecto busca simular el funcionamiento real de una tienda online, integrando modulos para la gestion de productos, clientes, pedidos y autenticacion de usuarios
+
+El diseño visual se inspira en tendencias minimalistas, priorizando la usabilidad y una navegacion intuitiva.
+De esta manera se busca que el cliente encuentre rapidamente lo que busca y disfrute de una experiencia moderna y fluida.
+
 ---
-## 1. Diseño general:
+
+1. Introducción
+
+El presente proyecto consiste en el desarrollo de una tienda virtual de ropa, cuyo objetivo principal es ofrecer una plataforma digital que permita la compra y gestión de prendas de vestir de manera rápida, sencilla y segura.
+
+El sistema busca brindar una experiencia de usuario moderna e intuitiva, en la que los clientes puedan visualizar el catálogo de productos, consultar precios, tallas y descripciones, además de realizar pedidos en línea.
+
+Para su desarrollo se utilizó el entorno de programación IntelliJ IDEA, junto con el framework Spring Boot, lo que facilita la creación de aplicaciones web estructuradas y escalables. Gracias a esta tecnología, la tienda puede gestionar de forma eficiente los diferentes módulos del sistema, tales como productos, usuarios, pedidos y seguridad.
+
+El diseño de la aplicación se enfoca en una interfaz limpia y atractiva, con una paleta de colores equilibrada y una navegación sencilla. Esto permite que el usuario final tenga una experiencia fluida, similar a la de las principales plataformas de comercio electrónico actuales.
+
+En conjunto, este proyecto representa una solución práctica para la digitalización del comercio minorista de ropa, demostrando la aplicación de herramientas modernas en el desarrollo de sistemas web orientados al usuario.
+
+
+##1. Diseño general:
 El boceto presenta un estilo moderno y limpio, ideal para una tienda de ropa. La distribución en secciones (cabecera, catálogo, y pie de página) es clara y fácil de navegar. Esto ayuda a que los usuarios encuentren rápido lo que buscan, algo clave en e-commerce.
 
-## 2. Encabezado (Header):
+Análisis del Boceto de la Tienda de Ropa Online
+1. Diseño General
 
-Muestra bien el nombre o logotipo de la tienda, y los enlaces principales (Inicio, Productos, Contacto, etc.).
+El diseño muestra una apariencia moderna, limpia y profesional, perfecta para una tienda de ropa.
+La estructura en secciones (encabezado, catálogo y pie de página) permite una navegación fluida y ayuda al usuario a encontrar rápidamente lo que necesita, algo esencial en el comercio digital.
 
-Podrías agregar un buscador en la parte superior, lo cual mejora la experiencia del usuario cuando la tienda crezca.
+2. Encabezado Header
+Se observa claramente el nombre o logotipo de la tienda, junto con los accesos directos a las secciones mas importantes(inicio, tienda , contacto, etc.)
 
-## 3. Sección principal (Catálogo):
+3. Seccion principal (catalogo)
+El catalogo esta bien organizado, con imagenes de las prendas visibles y bien espaciadas
+Recomendacion para mejoras: usar fondos blancos o neutros para resaltar mejor los colores y detalles de las prendas.
 
-Las imágenes de ropa están bien distribuidas.
+4.Colores y estilo visual
+La tableta es equilibrada y transmite profesionalismo. Se mantiene una tipografia coherente y legible  para reforzar la armonia visual
 
-Se recomienda usar fotos con fondo blanco o neutro para destacar las prendas.
 
-Cada producto debe tener su nombre, precio y botón de compra o detalles.
-## 4. Colores y estilo:
+1. Diseño general
 
-La paleta es equilibrada; sin embargo, podrías elegir una combinación de 2 a 3 colores que representen tu marca (por ejemplo: beige, negro y dorado para algo elegante; o azul y blanco para algo moderno).
+El diseño muestra una apariencia moderna, ordenada y atractiva, adecuada para una tienda de ropa. La organización por secciones (encabezado, catálogo y pie de página) facilita la navegación, permitiendo que los usuarios encuentren fácilmente los productos que buscan, lo cual es esencial en una plataforma de comercio electrónico.
 
-Asegúrate de mantener una tipografía uniforme y legible.
+2. Encabezado (Header)
+
+El encabezado presenta correctamente el nombre o logotipo de la tienda junto con los enlaces principales (Inicio, Productos, Contacto, etc.).
+Se sugiere incorporar un buscador en la parte superior para optimizar la experiencia del usuario, especialmente cuando el catálogo de productos aumente.
+
+3. Sección principal (Catálogo)
+
+Las imágenes de los productos están bien organizadas, lo que aporta claridad visual.
+Se recomienda utilizar fondos blancos o neutros en las fotografías para resaltar mejor las prendas.
+Cada artículo debe incluir su nombre, precio y un botón de compra o ver detalles, para ofrecer una navegación más funcional.
+
+4. Colores y estilo
+
+La paleta de colores es armoniosa y coherente, aunque sería ideal definir de dos a tres tonos principales que representen la identidad visual de la marca (por ejemplo, beige, negro y dorado para una imagen elegante; o azul y blanco para un estilo más moderno).
+Además, es importante mantener una tipografía uniforme y fácil de leer, lo que contribuye a una presentación más profesional.
 ## 5. Pie de página (Footer):
 
 Añadir enlaces a redes sociales, términos y condiciones, o una pequeña sección “Sobre nosotros” reforzaría la confianza del cliente.
@@ -138,7 +182,7 @@ Se está evaluando implementar **GitHub Actions** para que el proyecto pueda eje
 
 
 Este flujo asegura control de calidad, trazabilidad y colaboración responsable.
-=======
+
 ---
 
 
@@ -232,4 +276,125 @@ Se realizaron pruebas de integración con Postman para comprobar el funcionamien
 
 Se optimizó la estructura del proyecto, aplicando el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
 
+Se implementó la autenticación de usuarios mediante el framework Spring Boot.
 
+Se aplicó el cifrado de contraseñas para garantizar la confidencialidad de las credenciales.
+
+Se gestionaron roles de acceso (usuario y administrador) para establecer distintos niveles de permisos dentro del sistema.
+
+💡 Propuestas de Mejora
+
+Seguridad: incorporar el uso de JWT (JSON Web Tokens) para fortalecer la protección de las sesiones y mantener el cifrado de datos sensibles.
+
+Escalabilidad: adaptar la aplicación para una futura migración a entornos en la nube, facilitando su crecimiento y mantenimiento.
+
+Programación: integrar herramientas como Swagger o OpenAPI que permitan probar y visualizar los endpoints de manera más eficiente.
+
+Pruebas: implementar JUnit para realizar tests automatizados que aseguren el correcto funcionamiento de los controladores.
+
+👥 Flujo de Usuarios
+
+Diseñar una interfaz rápida e intuitiva, centrada en la experiencia del usuario.
+
+Incorporar métodos de pago locales como Yape o Plin para mayor comodidad.
+
+Mostrar un historial de pedidos, brindando transparencia y confianza al cliente durante su proceso de compra.
+
+☁️ Control de Versiones en la Nube
+
+El empleo de plataformas de control de versiones en la nube permite mantener un trabajo colaborativo, seguro y estructurado, conservando el historial de cambios realizados por cada integrante del equipo.
+Asimismo, proporciona sincronización automática y acceso remoto, optimizando la cooperación y el desarrollo continuo del proyecto.
+
+🧩 Contribuciones Realizadas
+
+Creación de la estructura inicial del proyecto en Spring Boot para la tienda de ropa.
+
+Configuración de la conexión a la base de datos y la capa de persistencia mediante JPA.
+
+Desarrollo del controlador principal con operaciones CRUD para los productos.
+
+Inclusión de validaciones de datos en el registro de productos y clientes.
+
+Implementación de un endpoint para listar productos disponibles.
+
+Desarrollo de la lógica de negocio para calcular stock y precios con descuento.
+
+Integración de Swagger para documentar y probar los servicios REST.
+
+Ejecución de pruebas de integración con Postman para comprobar la funcionalidad del backend.
+
+Mejora de la estructura del proyecto, siguiendo el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
+
+## 🗣️ Comunicación y Coordinación del Equipo (Discord)
+
+Durante el desarrollo del proyecto se utilizó **Discord** como la principal herramienta de comunicación y coordinación del equipo.
+
+### 💬 Objetivos del uso de Discord
+
+- **Comunicación en tiempo real:** permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.  
+- **Colaboración constante:** facilita la planificación diaria, asignación de tareas y seguimiento del progreso.  
+- **Canales temáticos:** se organizaron canales como `#frontend`, `#backend`, `#base-de-datos`, `#reuniones` y `#avisos` para mantener la información clara y ordenada.  
+- **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
+- **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+
+💡 Beneficios adicionales del uso de Discord en proyectos de sistemas
+
+Integración con herramientas de desarrollo: Discord puede conectarse con GitHub, Trello, Notion o Jira, enviando notificaciones automáticas sobre tareas o commits.
+
+Soporte para bots personalizados: se pueden usar bots para automatizar recordatorios de reuniones, registrar asistencia o mostrar el estado del repositorio.
+
+Compartición de archivos: permite subir documentos, capturas de código, imágenes de diseño o manuales sin salir del entorno de trabajo.
+
+Canales de pruebas y debugging: el equipo puede usar canales específicos para compartir errores, sugerencias y avances en correcciones.
+🧠 Ejemplo práctico de organización en Discord
+
+Servidor del proyecto: “Sistema de Gestión XYZ”
+Canales creados:
+
+#general → anuncios y avisos del líder del equipo
+
+#frontend → discusiones de interfaz y Angular
+
+#backend → lógica del sistema y controladores Java
+
+#base-de-datos → consultas SQL y modelos
+
+#github-commits → notificaciones automáticas de push o pull request
+
+#soporte → dudas técnicas o configuración local
+
+  Roles definidos:
+
+👑 Líder del proyecto
+
+💻 Desarrollador Backend
+
+🎨 Diseñador UI
+
+🧩 Tester / QA
+
+📊 Documentador
+
+
+🛠️ Sistemas de Seguimiento de Incidentes
+
+Los sistemas de seguimiento de incidentes son herramientas utilizadas para registrar, controlar y resolver errores, fallos o solicitudes que surgen durante el ciclo de vida de un proyecto de software. Permiten a los equipos mantener un control centralizado de problemas, garantizando una respuesta rápida y eficiente.
+
+💡 Objetivos principales
+
+Registrar y priorizar incidentes: cada error o solicitud se documenta con su nivel de urgencia y responsable asignado.
+
+Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de los problemas y colaborar en su solución.
+
+Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
+
+Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
+
+🧩 Tecnologías Utilizadas
+Categoría	Herramientas / Frameworks
+Frontend	Angular, TypeScript, HTML5, CSS3, Bootstrap
+Backend	Node.js / Express (o Spring Boot si lo estás usando)
+Base de Datos	MySQL / PostgreSQL / Firebase
+Control de versiones	GitHub
+Comunicación y Organización	Discord, Trello, Notion
+Diseño y prototipado	Figma, Canva, Balsamiq
