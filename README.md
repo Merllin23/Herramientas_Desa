@@ -443,6 +443,24 @@ Los sistemas de seguimiento de incidentes son herramientas utilizadas para regis
 
 Registrar y priorizar incidentes: cada error o solicitud se documenta con su nivel de urgencia y responsable asignado.
 
+Ojetivos del uso de Discord
+
+Comunicación en tiempo real: permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.
+
+Colaboración constante: facilita la planificación diaria, asignación de tareas y seguimiento del progreso.
+
+Canales temáticos: se organizaron canales como #frontend, #backend, #base-de-datos, #reuniones y #avisos para mantener la información clara y ordenada.
+
+Reuniones virtuales: se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.
+
+Integración con GitHub: se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+
+Gestión del equipo: permite asignar roles personalizados (por ejemplo, desarrollador backend, diseñador, tester o líder de proyecto) para una mejor organización.
+
+Historial accesible: conserva todos los mensajes, acuerdos y archivos compartidos, lo que facilita el seguimiento del trabajo y evita pérdida de información.
+
+Ambiente de trabajo colaborativo: fomenta la interacción del equipo en un entorno informal pero productivo, mejorando la motivación y cohesión grupal.
+
 Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de los problemas y colaborar en su solución.
 
 Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
