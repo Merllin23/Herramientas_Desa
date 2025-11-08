@@ -8,6 +8,23 @@
 * Abel Vargas
 
 ---
+Análisis del Boceto de la Tienda de Ropa Online
+1. Diseño General
+
+El diseño muestra una apariencia moderna, limpia y profesional, perfecta para una tienda de ropa.
+La estructura en secciones (encabezado, catálogo y pie de página) permite una navegación fluida y ayuda al usuario a encontrar rápidamente lo que necesita, algo esencial en el comercio digital.
+
+2. Encabezado Header
+Se observa claramente el nombre o logotipo de la tienda, junto con los accesos directos a las secciones mas importantes(inicio, tienda , contacto, etc.)
+
+3. Seccion principal (catalogo)
+El catalogo esta bien organizado, con imagenes de las prendas visibles y bien espaciadas
+Recomendacion para mejoras: usar fondos blancos o neutros para resaltar mejor los colores y detalles de las prendas.
+
+4.Colores y estilo visual
+La tableta es equilibrada y transmite profesionalismo. Se mantiene una tipografia coherente y legible  para reforzar la armonia visual
+
+
 1. Diseño general
 
 El diseño muestra una apariencia moderna, ordenada y atractiva, adecuada para una tienda de ropa. La organización por secciones (encabezado, catálogo y pie de página) facilita la navegación, permitiendo que los usuarios encuentren fácilmente los productos que buscan, lo cual es esencial en una plataforma de comercio electrónico.
@@ -136,7 +153,7 @@ Se está evaluando implementar **GitHub Actions** para que el proyecto pueda eje
 
 
 Este flujo asegura control de calidad, trazabilidad y colaboración responsable.
-=======
+
 ---
 
 
@@ -179,36 +196,56 @@ src/
  │       └─ static/ (CSS, JS, imágenes)
  └─ test/java/com/ecommerce/app/
 
-###Seguridad
--verificacion con springboot
-cifrado de contraseñas
-manejo de roles(usuario/admin)
+🔐 Seguridad
 
-###IDEAS DE MEJORA
--Seguridad:Implementar JWT para sesiones seguras y cifrado de contraseñas.
--Escalabilidad:Preparar la app para migrarla fácilmente a la nube.
--Programacion:Usar Swagger o OpenAPI para probar y visualizar los endpoints.
--Pruebas:Integrar JUnit para verificar el funcionamiento de los controladores.
+Se implementó la autenticación de usuarios mediante el framework Spring Boot.
 
-###FLUJO DE USUARIOS
--Diseño intuitivo y rapido para mejorar la experiencia
--Integrar metodos locales como yape o plin
--El historial de pedidos refuerza la confianza
+Se aplicó el cifrado de contraseñas para garantizar la confidencialidad de las credenciales.
 
-###CONTROL DE VERSIONES EN LA NUBE
-Trabajar con sistemas de control de versiones en la nube permite colaborar de forma organizada y segura, guardando el historial de cambios y mostrando quién modificó qué y cuándo.
-Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo.
+Se gestionaron roles de acceso (usuario y administrador) para establecer distintos niveles de permisos dentro del sistema.
 
- Contribución: se implementó la estructura base del proyecto Spring Boot para la tienda de ropa.
-Contribución: se configuró la conexión a la base de datos y la capa de persistencia con JPA.
-Contribución: se desarrolló el controlador para gestionar los productos (CRUD completo).
-Contribución: se agregó validación de datos al registrar nuevos productos y clientes.
-Contribución: se implementó el endpoint para listar los productos disponibles en la tienda.
-Contribución: se añadió la lógica de negocio para calcular el stock y los precios con descuento.
-Contribución: se configuró Swagger para documentar los servicios REST del proyecto.
-Contribución: se realizaron pruebas de integración con Postman para verificar el correcto funcionamiento del backend.
-Contribución: se mejoró la estructura del proyecto siguiendo el patrón MVC y buenas prácticas de Spring Boot.
+💡 Propuestas de Mejora
 
+Seguridad: incorporar el uso de JWT (JSON Web Tokens) para fortalecer la protección de las sesiones y mantener el cifrado de datos sensibles.
+
+Escalabilidad: adaptar la aplicación para una futura migración a entornos en la nube, facilitando su crecimiento y mantenimiento.
+
+Programación: integrar herramientas como Swagger o OpenAPI que permitan probar y visualizar los endpoints de manera más eficiente.
+
+Pruebas: implementar JUnit para realizar tests automatizados que aseguren el correcto funcionamiento de los controladores.
+
+👥 Flujo de Usuarios
+
+Diseñar una interfaz rápida e intuitiva, centrada en la experiencia del usuario.
+
+Incorporar métodos de pago locales como Yape o Plin para mayor comodidad.
+
+Mostrar un historial de pedidos, brindando transparencia y confianza al cliente durante su proceso de compra.
+
+☁️ Control de Versiones en la Nube
+
+El empleo de plataformas de control de versiones en la nube permite mantener un trabajo colaborativo, seguro y estructurado, conservando el historial de cambios realizados por cada integrante del equipo.
+Asimismo, proporciona sincronización automática y acceso remoto, optimizando la cooperación y el desarrollo continuo del proyecto.
+
+🧩 Contribuciones Realizadas
+
+Creación de la estructura inicial del proyecto en Spring Boot para la tienda de ropa.
+
+Configuración de la conexión a la base de datos y la capa de persistencia mediante JPA.
+
+Desarrollo del controlador principal con operaciones CRUD para los productos.
+
+Inclusión de validaciones de datos en el registro de productos y clientes.
+
+Implementación de un endpoint para listar productos disponibles.
+
+Desarrollo de la lógica de negocio para calcular stock y precios con descuento.
+
+Integración de Swagger para documentar y probar los servicios REST.
+
+Ejecución de pruebas de integración con Postman para comprobar la funcionalidad del backend.
+
+Mejora de la estructura del proyecto, siguiendo el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
 
 ## 🗣️ Comunicación y Coordinación del Equipo (Discord)
 
@@ -231,7 +268,6 @@ Soporte para bots personalizados: se pueden usar bots para automatizar recordato
 Compartición de archivos: permite subir documentos, capturas de código, imágenes de diseño o manuales sin salir del entorno de trabajo.
 
 Canales de pruebas y debugging: el equipo puede usar canales específicos para compartir errores, sugerencias y avances en correcciones.
-=======
 🧠 Ejemplo práctico de organización en Discord
 
 Servidor del proyecto: “Sistema de Gestión XYZ”
