@@ -7,7 +7,53 @@
 * Patrick Calderon
 * Abel Vargas
 
+
+
+INTRODUCCION DEL PROYECTO
+El presente proyecto consiste en el desarrollo de una tienda virtual de ropa moderna, diseñada para ofrecer una experiencia de compra rapida, atractiva y segura.
+El objetivo principal es permitir a los usuarios explorar el catalogo digital de prendas, vizualisar precios, detalles y realizar compras en linea desde cualquier dispositivo.
+
+Este E-commerce fue creado utilizando IntelliJ IDEA como entorno y springboot como framework principal, lo que permite, una arquitectura escalable y segura.
+El proyecto busca simular el funcionamiento real de una tienda online, integrando modulos para la gestion de productos, clientes, pedidos y autenticacion de usuarios
+
+El diseño visual se inspira en tendencias minimalistas, priorizando la usabilidad y una navegacion intuitiva.
+De esta manera se busca que el cliente encuentre rapidamente lo que busca y disfrute de una experiencia moderna y fluida.
+
 ---
+
+1. Introducción
+
+El presente proyecto consiste en el desarrollo de una tienda virtual de ropa, cuyo objetivo principal es ofrecer una plataforma digital que permita la compra y gestión de prendas de vestir de manera rápida, sencilla y segura.
+
+El sistema busca brindar una experiencia de usuario moderna e intuitiva, en la que los clientes puedan visualizar el catálogo de productos, consultar precios, tallas y descripciones, además de realizar pedidos en línea.
+
+Para su desarrollo se utilizó el entorno de programación IntelliJ IDEA, junto con el framework Spring Boot, lo que facilita la creación de aplicaciones web estructuradas y escalables. Gracias a esta tecnología, la tienda puede gestionar de forma eficiente los diferentes módulos del sistema, tales como productos, usuarios, pedidos y seguridad.
+
+El diseño de la aplicación se enfoca en una interfaz limpia y atractiva, con una paleta de colores equilibrada y una navegación sencilla. Esto permite que el usuario final tenga una experiencia fluida, similar a la de las principales plataformas de comercio electrónico actuales.
+
+En conjunto, este proyecto representa una solución práctica para la digitalización del comercio minorista de ropa, demostrando la aplicación de herramientas modernas en el desarrollo de sistemas web orientados al usuario.
+
+
+##1. Diseño general:
+El boceto presenta un estilo moderno y limpio, ideal para una tienda de ropa. La distribución en secciones (cabecera, catálogo, y pie de página) es clara y fácil de navegar. Esto ayuda a que los usuarios encuentren rápido lo que buscan, algo clave en e-commerce.
+
+Análisis del Boceto de la Tienda de Ropa Online
+1. Diseño General
+
+El diseño muestra una apariencia moderna, limpia y profesional, perfecta para una tienda de ropa.
+La estructura en secciones (encabezado, catálogo y pie de página) permite una navegación fluida y ayuda al usuario a encontrar rápidamente lo que necesita, algo esencial en el comercio digital.
+
+2. Encabezado Header
+Se observa claramente el nombre o logotipo de la tienda, junto con los accesos directos a las secciones mas importantes(inicio, tienda , contacto, etc.)
+
+3. Seccion principal (catalogo)
+El catalogo esta bien organizado, con imagenes de las prendas visibles y bien espaciadas
+Recomendacion para mejoras: usar fondos blancos o neutros para resaltar mejor los colores y detalles de las prendas.
+
+4.Colores y estilo visual
+La tableta es equilibrada y transmite profesionalismo. Se mantiene una tipografia coherente y legible  para reforzar la armonia visual
+
+
 1. Diseño general
 
 El diseño muestra una apariencia moderna, ordenada y atractiva, adecuada para una tienda de ropa. La organización por secciones (encabezado, catálogo y pie de página) facilita la navegación, permitiendo que los usuarios encuentren fácilmente los productos que buscan, lo cual es esencial en una plataforma de comercio electrónico.
@@ -136,7 +182,7 @@ Se está evaluando implementar **GitHub Actions** para que el proyecto pueda eje
 
 
 Este flujo asegura control de calidad, trazabilidad y colaboración responsable.
-=======
+
 ---
 
 
@@ -150,23 +196,35 @@ Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
 
 ### Buenas Prácticas de Colaboración
 
-Para asegurar un flujo de trabajo organizado y de calidad, hemos implementado las siguientes prácticas:
+Opción 1: Formal y Concisa (Énfasis en el control de calidad)
+"Hemos establecido un protocolo de Buenas Prácticas de Colaboración para garantizar un flujo de trabajo organizado y de alta calidad. Este se basa en la protección de la rama principal (main) contra commits directos, requiriendo que todas las modificaciones se realicen a través de Pull Requests (PRs) desde ramas separadas. La revisión y aprobación de código es obligatoria antes de la fusión, y cualquier conflicto debe ser resuelto en el PR de origen. Este proceso asegura la responsabilidad, el control de calidad y la trazabilidad de cada cambio."
 
-- **Main protegido**: la rama principal no acepta commits directos, evitando errores y cambios accidentales.  
-- **Pull Requests (PRs)**: todos los cambios deben realizarse en ramas individuales y luego enviarse mediante un PR hacia `main`.  
-- **Revisiones de código**: los PRs deben ser revisados y aprobados antes de fusionarse, fomentando el trabajo en equipo y la detección temprana de problemas.  
-- **Resolución de conflictos**: en caso de conflictos, estos se resuelven en la rama del PR antes de la fusión.  
+Opción 2: Orientada al Proceso (Énfasis en los pasos a seguir)
+"Para mantener un desarrollo ordenado y de calidad, se implementa el siguiente flujo de trabajo colaborativo:
 
-Este flujo asegura colaboración responsable, control de calidad y trazabilidad de todos los cambios en el proyecto.
+Protección de main: El commit directo a la rama principal está prohibido para prevenir fallos.
+
+Uso de PRs: Todo cambio debe originarse en una rama nueva y ser enviado a main mediante un Pull Request.
+
+Revisión y Aprobación: Los PRs deben ser revisados por un compañero y recibir aprobación antes de ser fusionados.
+
+Manejo de Conflictos: La resolución de conflictos es responsabilidad del PR antes de proceder a la integración.
+
+Este método garantiza la colaboración, el control de cambios y la calidad del proyecto."
+
+Opción 3: Breve y Directa
+"Hemos adoptado buenas prácticas de colaboración para un desarrollo de calidad: La rama main está protegida, y todos los cambios requieren un Pull Request (PR). Es obligatorio que estos PRs pasen por una revisión y aprobación de código antes de fusionarse. Los **conflictos deben ser resueltos en la rama del
 
 
 
-###Configuracion del entorno
-- java version: 21
-- -IDE recomendado: IntelliJ
-- Plugins Gradle: Spring-boot
+Configuración del entorno
 
-###Estructura 
+Versión de Java: 21
+
+IDE recomendado: IntelliJ IDEA
+
+Plugin: Gradle con soporte para Spring Boot
+Estructura del proyecto
 src/
  ├─ main/
  │   ├─ java/com/ecommerce/app/
@@ -176,13 +234,16 @@ src/
  │   │   └─ models/
  │   └─ resources/
  │       ├─ application.properties
- │       └─ static/ (CSS, JS, imágenes)
+ │       └─ static/ (archivos CSS, JS e imágenes)
  └─ test/java/com/ecommerce/app/
 
-###Seguridad
--verificacion con springboot
-cifrado de contraseñas
-manejo de roles(usuario/admin)
+Seguridad
+
+Implementación de verificación mediante Spring Boot
+
+Cifrado de contraseñas de los usuarios
+
+Gestión de roles (usuario y administrador) para controlar el acceso
 
 ###IDEAS DE MEJORA
 -Seguridad:Implementar JWT para sesiones seguras y cifrado de contraseñas.
@@ -195,32 +256,214 @@ manejo de roles(usuario/admin)
 -Integrar metodos locales como yape o plin
 -El historial de pedidos refuerza la confianza
 
-###CONTROL DE VERSIONES EN LA NUBE
-Trabajar con sistemas de control de versiones en la nube permite colaborar de forma organizada y segura, guardando el historial de cambios y mostrando quién modificó qué y cuándo.
-Además, ofrece sincronización automática y acceso remoto, lo que facilita el trabajo en equipo.
+☁️ Control de Versiones en la Nube
 
- Contribución: se implementó la estructura base del proyecto Spring Boot para la tienda de ropa.
-Contribución: se configuró la conexión a la base de datos y la capa de persistencia con JPA.
-Contribución: se desarrolló el controlador para gestionar los productos (CRUD completo).
-Contribución: se agregó validación de datos al registrar nuevos productos y clientes.
-Contribución: se implementó el endpoint para listar los productos disponibles en la tienda.
-Contribución: se añadió la lógica de negocio para calcular el stock y los precios con descuento.
-Contribución: se configuró Swagger para documentar los servicios REST del proyecto.
-Contribución: se realizaron pruebas de integración con Postman para verificar el correcto funcionamiento del backend.
-Contribución: se mejoró la estructura del proyecto siguiendo el patrón MVC y buenas prácticas de Spring Boot.
+El uso de plataformas de control de versiones en la nube permite una colaboración estructurada y segura entre los miembros del equipo. Estas herramientas almacenan el historial de modificaciones, mostrando quién realizó cada cambio y en qué momento. Además, ofrecen sincronización automática y acceso remoto, lo que facilita el trabajo colaborativo y la continuidad del desarrollo del proyecto.
+
+Principales contribuciones al proyecto:
+
+🔐 Seguridad
+
+Se implementó verificación y autenticación mediante Spring Boot.
+
+Se aplicó cifrado de contraseñas para proteger la información de los usuarios.
+
+Se gestionaron roles de acceso (usuario/administrador) para controlar los permisos dentro del sistema.
+
+💡 Propuestas de Mejora
+
+Seguridad: Integrar JWT para manejar sesiones seguras y reforzar el cifrado de credenciales.
+
+Escalabilidad: Preparar la aplicación para una futura migración a la nube y soportar mayor demanda.
+
+Programación: Incorporar Swagger u OpenAPI para documentar y probar fácilmente los endpoints del sistema.
+
+Pruebas: Añadir JUnit para realizar pruebas automatizadas y validar el correcto funcionamiento de los controladores.
+
+👥 Flujo de Usuarios
+
+Se priorizó un diseño simple e intuitivo que ofrezca rapidez y buena experiencia de uso.
+
+Se propone integrar métodos de pago locales como Yape o Plin para mayor comodidad.
+
+La inclusión del historial de pedidos fortalece la confianza del cliente y mejora la transparencia.
+
+☁️ Control de Versiones en la Nube
+
+El uso de herramientas de control de versiones en la nube permite una colaboración ordenada y segura, manteniendo un registro de los cambios realizados, el autor y la fecha.
+Además, facilita la sincronización automática y el trabajo remoto en equipo, garantizando la integridad del proyecto.
+
+🧩 Contribuciones Principales
+
+Se desarrolló la estructura base del proyecto en Spring Boot para la tienda de ropa.
+
+Se configuró la conexión con la base de datos y la capa de persistencia mediante JPA.
+
+Se construyó el controlador CRUD completo para la gestión de productos.
+
+Se implementó validación de datos al registrar productos y clientes.
+
+Se creó el endpoint para listar productos disponibles en la tienda.
+
+Se añadió la lógica de negocio para calcular el stock y aplicar descuentos en precios.
+
+Se configuró Swagger para documentar los servicios REST.
+
+Se realizaron pruebas de integración con Postman para comprobar el funcionamiento del backend.
+
+Se optimizó la estructura del proyecto, aplicando el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
+
+Se implementó la autenticación de usuarios mediante el framework Spring Boot.
+
+Se aplicó el cifrado de contraseñas para garantizar la confidencialidad de las credenciales.
+
+Se gestionaron roles de acceso (usuario y administrador) para establecer distintos niveles de permisos dentro del sistema.
+
+💡 Propuestas de Mejora
+
+Seguridad: incorporar el uso de JWT (JSON Web Tokens) para fortalecer la protección de las sesiones y mantener el cifrado de datos sensibles.
+
+Escalabilidad: adaptar la aplicación para una futura migración a entornos en la nube, facilitando su crecimiento y mantenimiento.
+
+Programación: integrar herramientas como Swagger o OpenAPI que permitan probar y visualizar los endpoints de manera más eficiente.
+
+Pruebas: implementar JUnit para realizar tests automatizados que aseguren el correcto funcionamiento de los controladores.
+
+👥 Flujo de Usuarios
+
+Diseñar una interfaz rápida e intuitiva, centrada en la experiencia del usuario.
+
+Incorporar métodos de pago locales como Yape o Plin para mayor comodidad.
+
+Mostrar un historial de pedidos, brindando transparencia y confianza al cliente durante su proceso de compra.
+
+☁️ Control de Versiones en la Nube
+
+El empleo de plataformas de control de versiones en la nube permite mantener un trabajo colaborativo, seguro y estructurado, conservando el historial de cambios realizados por cada integrante del equipo.
+Asimismo, proporciona sincronización automática y acceso remoto, optimizando la cooperación y el desarrollo continuo del proyecto.
+
+🧩 Contribuciones Realizadas
+
+Creación de la estructura inicial del proyecto en Spring Boot para la tienda de ropa.
+
+Configuración de la conexión a la base de datos y la capa de persistencia mediante JPA.
+
+Desarrollo del controlador principal con operaciones CRUD para los productos.
+
+Inclusión de validaciones de datos en el registro de productos y clientes.
+
+Implementación de un endpoint para listar productos disponibles.
+
+Desarrollo de la lógica de negocio para calcular stock y precios con descuento.
+
+Integración de Swagger para documentar y probar los servicios REST.
+
+Ejecución de pruebas de integración con Postman para comprobar la funcionalidad del backend.
+
+Mejora de la estructura del proyecto, siguiendo el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
+
+Se estableció la estructura base del proyecto en Spring Boot para la tienda de ropa.
+
+Se configuró la conexión con la base de datos y la capa de persistencia mediante JPA.
+
+Se desarrolló el controlador CRUD completo para la gestión de productos.
+
+Se añadieron validaciones de datos al registrar nuevos productos y clientes.
+
+Se implementó un endpoint para listar los productos disponibles en la tienda.
+
+Se integró la lógica de negocio para el cálculo de stock y aplicación de descuentos.
+
+Se configuró Swagger para la documentación de los servicios REST.
+
+Se realizaron pruebas de integración con Postman para comprobar el correcto funcionamiento del backend.
+
+Se optimizó la arquitectura del proyecto aplicando el patrón MVC y las buenas prácticas de desarrollo con Spring Boot.
+
+🗣️ Comunicación y Coordinación del Equipo (Discord)
+
+Durante el desarrollo, Discord se utilizó como la herramienta principal para la comunicación y coordinación del equipo.
+
+💬 Propósitos del uso de Discord
+
+Interacción en tiempo real: permitió resolver dudas técnicas o de diseño de manera inmediata sin necesidad de reuniones presenciales.
+
+Colaboración continua: facilitó la planificación diaria, distribución de tareas y seguimiento del avance del proyecto.
+
+Canales organizados: se crearon canales temáticos como #frontend, #backend, #base-de-datos, #reuniones y #avisos, lo que ayudó a mantener una comunicación clara y ordenada.
+
+Reuniones virtuales: se llevaron a cabo videollamadas y revisiones de código para evaluar avances y coordinar entregas.
+
+Integración con GitHub: se configuraron notificaciones automáticas sobre commits, issues y pull requests en un canal específico, mejorando la sincronización del equipo.
+
+💡 Beneficios adicionales del uso de Discord en proyectos de sistemas
+
+Integración con herramientas de desarrollo: Discord puede conectarse con GitHub, Trello, Notion o Jira, enviando notificaciones automáticas sobre tareas o commits.
+
+Soporte para bots personalizados: se pueden usar bots para automatizar recordatorios de reuniones, registrar asistencia o mostrar el estado del repositorio.
+
+Compartición de archivos: permite subir documentos, capturas de código, imágenes de diseño o manuales sin salir del entorno de trabajo.
+
+Canales de pruebas y debugging: el equipo puede usar canales específicos para compartir errores, sugerencias y avances en correcciones.
+🧠 Ejemplo práctico de organización en Discord
+
+Servidor del proyecto: “Sistema de Gestión XYZ”
+Canales creados:
+
+#general → anuncios y avisos del líder del equipo
+
+#frontend → discusiones de interfaz y Angular
+
+#backend → lógica del sistema y controladores Java
+
+#base-de-datos → consultas SQL y modelos
+
+#github-commits → notificaciones automáticas de push o pull request
+
+#soporte → dudas técnicas o configuración local
+
+  Roles definidos:
+
+👑 Líder del proyecto
+
+💻 Desarrollador Backend
+
+🎨 Diseñador UI
+
+🧩 Tester / QA
+
+📊 Documentador
 
 
-## 🗣️ Comunicación y Coordinación del Equipo (Discord)
+🛠️ Sistemas de Seguimiento de Incidentes
 
-Durante el desarrollo del proyecto se utilizó **Discord** como la principal herramienta de comunicación y coordinación del equipo.
+Los sistemas de seguimiento de incidentes son herramientas utilizadas para registrar, controlar y resolver errores, fallos o solicitudes que surgen durante el ciclo de vida de un proyecto de software. Permiten a los equipos mantener un control centralizado de problemas, garantizando una respuesta rápida y eficiente.
 
-### 💬 Objetivos del uso de Discord
+💡 Objetivos principales
 
-- **Comunicación en tiempo real:** permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.  
-- **Colaboración constante:** facilita la planificación diaria, asignación de tareas y seguimiento del progreso.  
-- **Canales temáticos:** se organizaron canales como `#frontend`, `#backend`, `#base-de-datos`, `#reuniones` y `#avisos` para mantener la información clara y ordenada.  
-- **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
-- **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+Registrar y priorizar incidentes: cada error o solicitud se documenta con su nivel de urgencia y responsable asignado.
+
+Ojetivos del uso de Discord
+
+Comunicación en tiempo real: permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.
+
+Colaboración constante: facilita la planificación diaria, asignación de tareas y seguimiento del progreso.
+
+Canales temáticos: se organizaron canales como #frontend, #backend, #base-de-datos, #reuniones y #avisos para mantener la información clara y ordenada.
+
+Reuniones virtuales: se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.
+
+Integración con GitHub: se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+
+Gestión del equipo: permite asignar roles personalizados (por ejemplo, desarrollador backend, diseñador, tester o líder de proyecto) para una mejor organización.
+
+Historial accesible: conserva todos los mensajes, acuerdos y archivos compartidos, lo que facilita el seguimiento del trabajo y evita pérdida de información.
+
+Ambiente de trabajo colaborativo: fomenta la interacción del equipo en un entorno informal pero productivo, mejorando la motivación y cohesión grupal.
+
+Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de los problemas y colaborar en su solución.
+
+Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
 
 🗂️ 1. GitHub Projects
 
@@ -263,3 +506,13 @@ Permite asignar tareas, medir tiempos y vincular repositorios de GitHub.
 Muy útil en equipos medianos o grandes con metodologías formales.
 
 
+Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
+
+🧩 Tecnologías Utilizadas
+Categoría	Herramientas / Frameworks
+Frontend	Angular, TypeScript, HTML5, CSS3, Bootstrap
+Backend	Node.js / Express (o Spring Boot si lo estás usando)
+Base de Datos	MySQL / PostgreSQL / Firebase
+Control de versiones	GitHub
+Comunicación y Organización	Discord, Trello, Notion
+Diseño y prototipado	Figma, Canva, Balsamiq
