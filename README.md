@@ -222,6 +222,16 @@ Durante el desarrollo del proyecto se utilizó **Discord** como la principal her
 - **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
 - **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
 
+💡 Beneficios adicionales del uso de Discord en proyectos de sistemas
+
+Integración con herramientas de desarrollo: Discord puede conectarse con GitHub, Trello, Notion o Jira, enviando notificaciones automáticas sobre tareas o commits.
+
+Soporte para bots personalizados: se pueden usar bots para automatizar recordatorios de reuniones, registrar asistencia o mostrar el estado del repositorio.
+
+Compartición de archivos: permite subir documentos, capturas de código, imágenes de diseño o manuales sin salir del entorno de trabajo.
+
+Canales de pruebas y debugging: el equipo puede usar canales específicos para compartir errores, sugerencias y avances en correcciones.
+=======
 🧠 Ejemplo práctico de organización en Discord
 
 Servidor del proyecto: “Sistema de Gestión XYZ”
