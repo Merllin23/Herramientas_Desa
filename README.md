@@ -227,6 +227,55 @@ src/
 
 🔐 Seguridad
 
+Se implementó verificación y autenticación mediante Spring Boot.
+
+Se aplicó cifrado de contraseñas para proteger la información de los usuarios.
+
+Se gestionaron roles de acceso (usuario/administrador) para controlar los permisos dentro del sistema.
+
+💡 Propuestas de Mejora
+
+Seguridad: Integrar JWT para manejar sesiones seguras y reforzar el cifrado de credenciales.
+
+Escalabilidad: Preparar la aplicación para una futura migración a la nube y soportar mayor demanda.
+
+Programación: Incorporar Swagger u OpenAPI para documentar y probar fácilmente los endpoints del sistema.
+
+Pruebas: Añadir JUnit para realizar pruebas automatizadas y validar el correcto funcionamiento de los controladores.
+
+👥 Flujo de Usuarios
+
+Se priorizó un diseño simple e intuitivo que ofrezca rapidez y buena experiencia de uso.
+
+Se propone integrar métodos de pago locales como Yape o Plin para mayor comodidad.
+
+La inclusión del historial de pedidos fortalece la confianza del cliente y mejora la transparencia.
+
+☁️ Control de Versiones en la Nube
+
+El uso de herramientas de control de versiones en la nube permite una colaboración ordenada y segura, manteniendo un registro de los cambios realizados, el autor y la fecha.
+Además, facilita la sincronización automática y el trabajo remoto en equipo, garantizando la integridad del proyecto.
+
+🧩 Contribuciones Principales
+
+Se desarrolló la estructura base del proyecto en Spring Boot para la tienda de ropa.
+
+Se configuró la conexión con la base de datos y la capa de persistencia mediante JPA.
+
+Se construyó el controlador CRUD completo para la gestión de productos.
+
+Se implementó validación de datos al registrar productos y clientes.
+
+Se creó el endpoint para listar productos disponibles en la tienda.
+
+Se añadió la lógica de negocio para calcular el stock y aplicar descuentos en precios.
+
+Se configuró Swagger para documentar los servicios REST.
+
+Se realizaron pruebas de integración con Postman para comprobar el funcionamiento del backend.
+
+Se optimizó la estructura del proyecto, aplicando el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
+
 Se implementó la autenticación de usuarios mediante el framework Spring Boot.
 
 Se aplicó el cifrado de contraseñas para garantizar la confidencialidad de las credenciales.
