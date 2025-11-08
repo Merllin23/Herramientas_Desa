@@ -225,6 +225,28 @@ src/
  │       └─ static/ (CSS, JS, imágenes)
  └─ test/java/com/ecommerce/app/
 
+###Seguridad
+-verificacion con springboot
+cifrado de contraseñas
+manejo de roles(usuario/admin)
+
+###IDEAS DE MEJORA
+-Seguridad:Implementar JWT para sesiones seguras y cifrado de contraseñas.
+-Escalabilidad:Preparar la app para migrarla fácilmente a la nube.
+-Programacion:Usar Swagger o OpenAPI para probar y visualizar los endpoints.
+-Pruebas:Integrar JUnit para verificar el funcionamiento de los controladores.
+
+###FLUJO DE USUARIOS
+-Diseño intuitivo y rapido para mejorar la experiencia
+-Integrar metodos locales como yape o plin
+-El historial de pedidos refuerza la confianza
+
+☁️ Control de Versiones en la Nube
+
+El uso de plataformas de control de versiones en la nube permite una colaboración estructurada y segura entre los miembros del equipo. Estas herramientas almacenan el historial de modificaciones, mostrando quién realizó cada cambio y en qué momento. Además, ofrecen sincronización automática y acceso remoto, lo que facilita el trabajo colaborativo y la continuidad del desarrollo del proyecto.
+
+Principales contribuciones al proyecto:
+
 🔐 Seguridad
 
 Se implementó verificación y autenticación mediante Spring Boot.
@@ -325,17 +347,39 @@ Ejecución de pruebas de integración con Postman para comprobar la funcionalida
 
 Mejora de la estructura del proyecto, siguiendo el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
 
-## 🗣️ Comunicación y Coordinación del Equipo (Discord)
+Se estableció la estructura base del proyecto en Spring Boot para la tienda de ropa.
 
-Durante el desarrollo del proyecto se utilizó **Discord** como la principal herramienta de comunicación y coordinación del equipo.
+Se configuró la conexión con la base de datos y la capa de persistencia mediante JPA.
 
-### 💬 Objetivos del uso de Discord
+Se desarrolló el controlador CRUD completo para la gestión de productos.
 
-- **Comunicación en tiempo real:** permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.  
-- **Colaboración constante:** facilita la planificación diaria, asignación de tareas y seguimiento del progreso.  
-- **Canales temáticos:** se organizaron canales como `#frontend`, `#backend`, `#base-de-datos`, `#reuniones` y `#avisos` para mantener la información clara y ordenada.  
-- **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
-- **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+Se añadieron validaciones de datos al registrar nuevos productos y clientes.
+
+Se implementó un endpoint para listar los productos disponibles en la tienda.
+
+Se integró la lógica de negocio para el cálculo de stock y aplicación de descuentos.
+
+Se configuró Swagger para la documentación de los servicios REST.
+
+Se realizaron pruebas de integración con Postman para comprobar el correcto funcionamiento del backend.
+
+Se optimizó la arquitectura del proyecto aplicando el patrón MVC y las buenas prácticas de desarrollo con Spring Boot.
+
+🗣️ Comunicación y Coordinación del Equipo (Discord)
+
+Durante el desarrollo, Discord se utilizó como la herramienta principal para la comunicación y coordinación del equipo.
+
+💬 Propósitos del uso de Discord
+
+Interacción en tiempo real: permitió resolver dudas técnicas o de diseño de manera inmediata sin necesidad de reuniones presenciales.
+
+Colaboración continua: facilitó la planificación diaria, distribución de tareas y seguimiento del avance del proyecto.
+
+Canales organizados: se crearon canales temáticos como #frontend, #backend, #base-de-datos, #reuniones y #avisos, lo que ayudó a mantener una comunicación clara y ordenada.
+
+Reuniones virtuales: se llevaron a cabo videollamadas y revisiones de código para evaluar avances y coordinar entregas.
+
+Integración con GitHub: se configuraron notificaciones automáticas sobre commits, issues y pull requests en un canal específico, mejorando la sincronización del equipo.
 
 💡 Beneficios adicionales del uso de Discord en proyectos de sistemas
 
