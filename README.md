@@ -465,6 +465,47 @@ Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de 
 
 Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
 
+🗂️ 1. GitHub Projects
+
+Integrada directamente en GitHub.
+
+Permite crear tableros Kanban, asignar tareas y vincular issues o pull requests.
+
+Ideal para planificar sprints, definir prioridades y visualizar el progreso del equipo.
+
+💬 2. Slack
+
+Plataforma de comunicación en tiempo real.
+
+Facilita la colaboración mediante canales por temas, menciones y notificaciones automáticas de GitHub.
+
+Permite integrar alertas de commits, issues y revisiones de código.
+
+📅 3. Trello
+
+Usa un sistema de tarjetas y listas muy visual para organizar tareas.
+
+Cada tarjeta puede representar una función, un error o una mejora.
+
+Se puede enlazar con GitHub para actualizar automáticamente el estado de los commits y issues.
+
+✅ 4. Notion
+
+Herramienta para documentar el proyecto, registrar decisiones y mantener una wiki técnica.
+
+Ideal para centralizar requisitos, diagramas y planificación.
+
+Admite integración con GitHub y Google Drive.
+
+🎯 5. Jira Software
+
+Usada para gestión ágil de proyectos (Scrum/Kanban).
+
+Permite asignar tareas, medir tiempos y vincular repositorios de GitHub.
+
+Muy útil en equipos medianos o grandes con metodologías formales.
+
+
 Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
 
 🧩 Tecnologías Utilizadas
