@@ -196,14 +196,24 @@ Se resuelven revisando, eligiendo o combinando las versiones antes de confirmar.
 
 ### Buenas Prácticas de Colaboración
 
-Para asegurar un flujo de trabajo organizado y de calidad, hemos implementado las siguientes prácticas:
+Opción 1: Formal y Concisa (Énfasis en el control de calidad)
+"Hemos establecido un protocolo de Buenas Prácticas de Colaboración para garantizar un flujo de trabajo organizado y de alta calidad. Este se basa en la protección de la rama principal (main) contra commits directos, requiriendo que todas las modificaciones se realicen a través de Pull Requests (PRs) desde ramas separadas. La revisión y aprobación de código es obligatoria antes de la fusión, y cualquier conflicto debe ser resuelto en el PR de origen. Este proceso asegura la responsabilidad, el control de calidad y la trazabilidad de cada cambio."
 
-- **Main protegido**: la rama principal no acepta commits directos, evitando errores y cambios accidentales.  
-- **Pull Requests (PRs)**: todos los cambios deben realizarse en ramas individuales y luego enviarse mediante un PR hacia `main`.  
-- **Revisiones de código**: los PRs deben ser revisados y aprobados antes de fusionarse, fomentando el trabajo en equipo y la detección temprana de problemas.  
-- **Resolución de conflictos**: en caso de conflictos, estos se resuelven en la rama del PR antes de la fusión.  
+Opción 2: Orientada al Proceso (Énfasis en los pasos a seguir)
+"Para mantener un desarrollo ordenado y de calidad, se implementa el siguiente flujo de trabajo colaborativo:
 
-Este flujo asegura colaboración responsable, control de calidad y trazabilidad de todos los cambios en el proyecto.
+Protección de main: El commit directo a la rama principal está prohibido para prevenir fallos.
+
+Uso de PRs: Todo cambio debe originarse en una rama nueva y ser enviado a main mediante un Pull Request.
+
+Revisión y Aprobación: Los PRs deben ser revisados por un compañero y recibir aprobación antes de ser fusionados.
+
+Manejo de Conflictos: La resolución de conflictos es responsabilidad del PR antes de proceder a la integración.
+
+Este método garantiza la colaboración, el control de cambios y la calidad del proyecto."
+
+Opción 3: Breve y Directa
+"Hemos adoptado buenas prácticas de colaboración para un desarrollo de calidad: La rama main está protegida, y todos los cambios requieren un Pull Request (PR). Es obligatorio que estos PRs pasen por una revisión y aprobación de código antes de fusionarse. Los **conflictos deben ser resueltos en la rama del
 
 
 
