@@ -25,6 +25,28 @@ Recomendacion para mejoras: usar fondos blancos o neutros para resaltar mejor lo
 La tableta es equilibrada y transmite profesionalismo. Se mantiene una tipografia coherente y legible  para reforzar la armonia visual
 
 
+1. Diseño general
+
+El diseño muestra una apariencia moderna, ordenada y atractiva, adecuada para una tienda de ropa. La organización por secciones (encabezado, catálogo y pie de página) facilita la navegación, permitiendo que los usuarios encuentren fácilmente los productos que buscan, lo cual es esencial en una plataforma de comercio electrónico.
+
+2. Encabezado (Header)
+
+El encabezado presenta correctamente el nombre o logotipo de la tienda junto con los enlaces principales (Inicio, Productos, Contacto, etc.).
+Se sugiere incorporar un buscador en la parte superior para optimizar la experiencia del usuario, especialmente cuando el catálogo de productos aumente.
+
+3. Sección principal (Catálogo)
+
+Las imágenes de los productos están bien organizadas, lo que aporta claridad visual.
+Se recomienda utilizar fondos blancos o neutros en las fotografías para resaltar mejor las prendas.
+Cada artículo debe incluir su nombre, precio y un botón de compra o ver detalles, para ofrecer una navegación más funcional.
+
+4. Colores y estilo
+
+La paleta de colores es armoniosa y coherente, aunque sería ideal definir de dos a tres tonos principales que representen la identidad visual de la marca (por ejemplo, beige, negro y dorado para una imagen elegante; o azul y blanco para un estilo más moderno).
+Además, es importante mantener una tipografía uniforme y fácil de leer, lo que contribuye a una presentación más profesional.
+## 5. Pie de página (Footer):
+
+Añadir enlaces a redes sociales, términos y condiciones, o una pequeña sección “Sobre nosotros” reforzaría la confianza del cliente.
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b329e9c0-114a-42d1-bfb5-2928d0c0106e" />
 
 
@@ -131,7 +153,7 @@ Se está evaluando implementar **GitHub Actions** para que el proyecto pueda eje
 
 
 Este flujo asegura control de calidad, trazabilidad y colaboración responsable.
-=======
+
 ---
 
 
@@ -225,3 +247,76 @@ Ejecución de pruebas de integración con Postman para comprobar la funcionalida
 
 Mejora de la estructura del proyecto, siguiendo el patrón MVC y las buenas prácticas de desarrollo en Spring Boot.
 
+## 🗣️ Comunicación y Coordinación del Equipo (Discord)
+
+Durante el desarrollo del proyecto se utilizó **Discord** como la principal herramienta de comunicación y coordinación del equipo.
+
+### 💬 Objetivos del uso de Discord
+
+- **Comunicación en tiempo real:** permite resolver dudas técnicas o de diseño de forma inmediata sin depender de reuniones presenciales.  
+- **Colaboración constante:** facilita la planificación diaria, asignación de tareas y seguimiento del progreso.  
+- **Canales temáticos:** se organizaron canales como `#frontend`, `#backend`, `#base-de-datos`, `#reuniones` y `#avisos` para mantener la información clara y ordenada.  
+- **Reuniones virtuales:** se realizan llamadas de voz o video para revisiones de código, demostraciones de avance y coordinación de entregas.  
+- **Integración con GitHub:** se configuraron notificaciones automáticas de commits, issues y pull requests en un canal dedicado del servidor.
+
+💡 Beneficios adicionales del uso de Discord en proyectos de sistemas
+
+Integración con herramientas de desarrollo: Discord puede conectarse con GitHub, Trello, Notion o Jira, enviando notificaciones automáticas sobre tareas o commits.
+
+Soporte para bots personalizados: se pueden usar bots para automatizar recordatorios de reuniones, registrar asistencia o mostrar el estado del repositorio.
+
+Compartición de archivos: permite subir documentos, capturas de código, imágenes de diseño o manuales sin salir del entorno de trabajo.
+
+Canales de pruebas y debugging: el equipo puede usar canales específicos para compartir errores, sugerencias y avances en correcciones.
+🧠 Ejemplo práctico de organización en Discord
+
+Servidor del proyecto: “Sistema de Gestión XYZ”
+Canales creados:
+
+#general → anuncios y avisos del líder del equipo
+
+#frontend → discusiones de interfaz y Angular
+
+#backend → lógica del sistema y controladores Java
+
+#base-de-datos → consultas SQL y modelos
+
+#github-commits → notificaciones automáticas de push o pull request
+
+#soporte → dudas técnicas o configuración local
+
+  Roles definidos:
+
+👑 Líder del proyecto
+
+💻 Desarrollador Backend
+
+🎨 Diseñador UI
+
+🧩 Tester / QA
+
+📊 Documentador
+
+
+🛠️ Sistemas de Seguimiento de Incidentes
+
+Los sistemas de seguimiento de incidentes son herramientas utilizadas para registrar, controlar y resolver errores, fallos o solicitudes que surgen durante el ciclo de vida de un proyecto de software. Permiten a los equipos mantener un control centralizado de problemas, garantizando una respuesta rápida y eficiente.
+
+💡 Objetivos principales
+
+Registrar y priorizar incidentes: cada error o solicitud se documenta con su nivel de urgencia y responsable asignado.
+
+Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de los problemas y colaborar en su solución.
+
+Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
+
+Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
+
+🧩 Tecnologías Utilizadas
+Categoría	Herramientas / Frameworks
+Frontend	Angular, TypeScript, HTML5, CSS3, Bootstrap
+Backend	Node.js / Express (o Spring Boot si lo estás usando)
+Base de Datos	MySQL / PostgreSQL / Firebase
+Control de versiones	GitHub
+Comunicación y Organización	Discord, Trello, Notion
+Diseño y prototipado	Figma, Canva, Balsamiq
