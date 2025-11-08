@@ -231,3 +231,56 @@ Soporte para bots personalizados: se pueden usar bots para automatizar recordato
 Compartición de archivos: permite subir documentos, capturas de código, imágenes de diseño o manuales sin salir del entorno de trabajo.
 
 Canales de pruebas y debugging: el equipo puede usar canales específicos para compartir errores, sugerencias y avances en correcciones.
+=======
+🧠 Ejemplo práctico de organización en Discord
+
+Servidor del proyecto: “Sistema de Gestión XYZ”
+Canales creados:
+
+#general → anuncios y avisos del líder del equipo
+
+#frontend → discusiones de interfaz y Angular
+
+#backend → lógica del sistema y controladores Java
+
+#base-de-datos → consultas SQL y modelos
+
+#github-commits → notificaciones automáticas de push o pull request
+
+#soporte → dudas técnicas o configuración local
+
+  Roles definidos:
+
+👑 Líder del proyecto
+
+💻 Desarrollador Backend
+
+🎨 Diseñador UI
+
+🧩 Tester / QA
+
+📊 Documentador
+
+
+🛠️ Sistemas de Seguimiento de Incidentes
+
+Los sistemas de seguimiento de incidentes son herramientas utilizadas para registrar, controlar y resolver errores, fallos o solicitudes que surgen durante el ciclo de vida de un proyecto de software. Permiten a los equipos mantener un control centralizado de problemas, garantizando una respuesta rápida y eficiente.
+
+💡 Objetivos principales
+
+Registrar y priorizar incidentes: cada error o solicitud se documenta con su nivel de urgencia y responsable asignado.
+
+Mejorar la comunicación del equipo: todos los miembros pueden ver el estado de los problemas y colaborar en su solución.
+
+Monitorear el progreso del proyecto: facilita el seguimiento del rendimiento y la detección temprana de áreas críticas.
+
+Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
+
+🧩 Tecnologías Utilizadas
+Categoría	Herramientas / Frameworks
+Frontend	Angular, TypeScript, HTML5, CSS3, Bootstrap
+Backend	Node.js / Express (o Spring Boot si lo estás usando)
+Base de Datos	MySQL / PostgreSQL / Firebase
+Control de versiones	GitHub
+Comunicación y Organización	Discord, Trello, Notion
+Diseño y prototipado	Figma, Canva, Balsamiq
