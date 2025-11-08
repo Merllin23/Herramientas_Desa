@@ -20,6 +20,23 @@ El diseño visual se inspira en tendencias minimalistas, priorizando la usabilid
 De esta manera se busca que el cliente encuentre rapidamente lo que busca y disfrute de una experiencia moderna y fluida.
 
 ---
+
+1. Introducción
+
+El presente proyecto consiste en el desarrollo de una tienda virtual de ropa, cuyo objetivo principal es ofrecer una plataforma digital que permita la compra y gestión de prendas de vestir de manera rápida, sencilla y segura.
+
+El sistema busca brindar una experiencia de usuario moderna e intuitiva, en la que los clientes puedan visualizar el catálogo de productos, consultar precios, tallas y descripciones, además de realizar pedidos en línea.
+
+Para su desarrollo se utilizó el entorno de programación IntelliJ IDEA, junto con el framework Spring Boot, lo que facilita la creación de aplicaciones web estructuradas y escalables. Gracias a esta tecnología, la tienda puede gestionar de forma eficiente los diferentes módulos del sistema, tales como productos, usuarios, pedidos y seguridad.
+
+El diseño de la aplicación se enfoca en una interfaz limpia y atractiva, con una paleta de colores equilibrada y una navegación sencilla. Esto permite que el usuario final tenga una experiencia fluida, similar a la de las principales plataformas de comercio electrónico actuales.
+
+En conjunto, este proyecto representa una solución práctica para la digitalización del comercio minorista de ropa, demostrando la aplicación de herramientas modernas en el desarrollo de sistemas web orientados al usuario.
+
+
+##1. Diseño general:
+El boceto presenta un estilo moderno y limpio, ideal para una tienda de ropa. La distribución en secciones (cabecera, catálogo, y pie de página) es clara y fácil de navegar. Esto ayuda a que los usuarios encuentren rápido lo que buscan, algo clave en e-commerce.
+
 Análisis del Boceto de la Tienda de Ropa Online
 1. Diseño General
 
