@@ -207,12 +207,14 @@ Este flujo asegura colaboración responsable, control de calidad y trazabilidad 
 
 
 
-###Configuracion del entorno
-- java version: 21
-- -IDE recomendado: IntelliJ
-- Plugins Gradle: Spring-boot
+Configuración del entorno
 
-###Estructura 
+Versión de Java: 21
+
+IDE recomendado: IntelliJ IDEA
+
+Plugin: Gradle con soporte para Spring Boot
+Estructura del proyecto
 src/
  ├─ main/
  │   ├─ java/com/ecommerce/app/
@@ -222,13 +224,16 @@ src/
  │   │   └─ models/
  │   └─ resources/
  │       ├─ application.properties
- │       └─ static/ (CSS, JS, imágenes)
+ │       └─ static/ (archivos CSS, JS e imágenes)
  └─ test/java/com/ecommerce/app/
 
-###Seguridad
--verificacion con springboot
-cifrado de contraseñas
-manejo de roles(usuario/admin)
+Seguridad
+
+Implementación de verificación mediante Spring Boot
+
+Cifrado de contraseñas de los usuarios
+
+Gestión de roles (usuario y administrador) para controlar el acceso
 
 ###IDEAS DE MEJORA
 -Seguridad:Implementar JWT para sesiones seguras y cifrado de contraseñas.
