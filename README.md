@@ -7,6 +7,18 @@
 * Patrick Calderon
 * Abel Vargas
 
+
+
+INTRODUCCION DEL PROYECTO
+El presente proyecto consiste en el desarrollo de una tienda virtual de ropa moderna, diseñada para ofrecer una experiencia de compra rapida, atractiva y segura.
+El objetivo principal es permitir a los usuarios explorar el catalogo digital de prendas, vizualisar precios, detalles y realizar compras en linea desde cualquier dispositivo.
+
+Este E-commerce fue creado utilizando IntelliJ IDEA como entorno y springboot como framework principal, lo que permite, una arquitectura escalable y segura.
+El proyecto busca simular el funcionamiento real de una tienda online, integrando modulos para la gestion de productos, clientes, pedidos y autenticacion de usuarios
+
+El diseño visual se inspira en tendencias minimalistas, priorizando la usabilidad y una navegacion intuitiva.
+De esta manera se busca que el cliente encuentre rapidamente lo que busca y disfrute de una experiencia moderna y fluida.
+
 ---
 Análisis del Boceto de la Tienda de Ropa Online
 1. Diseño General
