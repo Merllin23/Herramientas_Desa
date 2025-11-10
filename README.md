@@ -20,6 +20,15 @@ El diseño visual se inspira en tendencias minimalistas, priorizando la usabilid
 De esta manera se busca que el cliente encuentre rapidamente lo que busca y disfrute de una experiencia moderna y fluida.
 
 ---
+✨ Visión General
+
+Nuestra misión es llevar la moda de alta calidad y las tendencias más actuales directamente a nuestros clientes, proporcionando una interfaz de compra intuitiva y segura.
+
+Este repositorio contiene el código fuente completo de:
+
+Front-end: La interfaz de usuario construida con [Tecnología de Front-end, ej: React, Vue, HTML/CSS].
+
+Back-end: La lógica del servidor, API RESTful, y la gestión de la base de datos de productos, usuarios y pedidos, construida con [Tecnología de Back-end, ej: Node.js/Express, Python/Django].
 
 1. Introducción
 
