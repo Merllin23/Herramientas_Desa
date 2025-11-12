@@ -517,11 +517,14 @@ Muy útil en equipos medianos o grandes con metodologías formales.
 
 Asegurar la calidad del software: al gestionar correctamente los errores, se garantiza la estabilidad del sistema final.
 
+
+
 🧩 Tecnologías Utilizadas
-Categoría	Herramientas / Frameworks
-Frontend	Angular, TypeScript, HTML5, CSS3, Bootstrap
-Backend	Node.js / Express (o Spring Boot si lo estás usando)
-Base de Datos	MySQL / PostgreSQL / Firebase
-Control de versiones	GitHub
-Comunicación y Organización	Discord, Trello, Notion
-Diseño y prototipado	Figma, Canva, Balsamiq
+Área	Tecnología
+Frontend	Angular / React
+Backend	Spring Boot / Node.js
+Base de Datos	PostgreSQL / MySQL
+Control de Versiones	GitHub
+Estilos	Tailwind / Bootstrap
+Testing	Postman, JUnit
+Colaboración	Discord, Trello
