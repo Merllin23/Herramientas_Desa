@@ -528,3 +528,26 @@ Control de Versiones	GitHub
 Estilos	Tailwind / Bootstrap
 Testing	Postman, JUnit
 Colaboración	Discord, Trello
+
+Calendario de Avances para E-commerce de Ropa (12 Semanas)
+Fase I: Planificación y Estructura (Semanas 1 - 2)
+Esta fase se centra en definir los cimientos del proyecto.
+
+Definición de Alcance (Semana 1): Establecer objetivos claros, determinar el público objetivo y los requisitos funcionales de la tienda.
+
+Análisis y Plataforma (Semana 1): Realizar un análisis de la competencia y seleccionar la plataforma de e-commerce adecuada (Shopify, WooCommerce, etc.).
+
+Mapa del Sitio (Semana 2): Diseñar la estructura de la web, categorías de productos y navegación.
+
+Hito Clave: Documento de requisitos y plataforma elegida.
+
+Fase II: Diseño y Desarrollo (Semanas 3 - 7)
+Se pasa de la idea a la construcción de la tienda en línea.
+
+Diseño UX/UI (Semana 3): Crear los bocetos visuales (wireframes y mockups) de la interfaz de usuario.
+
+Desarrollo Front-End (Semanas 4 - 5): Codificación de la parte visible de la web (diseño, interactividad, maquetación).
+
+Desarrollo Back-End (Semanas 5 - 7): Integración de funcionalidades clave como el sistema de inventario, pasarelas de pago y la gestión de usuarios.
+
+Hito Clave: Plataforma en un entorno de prueba (Beta Funcional).
