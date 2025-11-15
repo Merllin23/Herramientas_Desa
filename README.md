@@ -82,11 +82,6 @@ Cada artículo debe incluir su nombre, precio y un botón de compra o ver detall
 
 La paleta de colores es armoniosa y coherente, aunque sería ideal definir de dos a tres tonos principales que representen la identidad visual de la marca (por ejemplo, beige, negro y dorado para una imagen elegante; o azul y blanco para un estilo más moderno).
 Además, es importante mantener una tipografía uniforme y fácil de leer, lo que contribuye a una presentación más profesional.
-## 5. Pie de página (Footer):
-
-Añadir enlaces a redes sociales, términos y condiciones, o una pequeña sección “Sobre nosotros” reforzaría la confianza del cliente.
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b329e9c0-114a-42d1-bfb5-2928d0c0106e" />
-
 
 ## Herramientas de Desarrollo
 
