@@ -546,3 +546,26 @@ Desarrollo Front-End (Semanas 4 - 5): Codificación de la parte visible de la we
 Desarrollo Back-End (Semanas 5 - 7): Integración de funcionalidades clave como el sistema de inventario, pasarelas de pago y la gestión de usuarios.
 
 Hito Clave: Plataforma en un entorno de prueba (Beta Funcional).
+
+
+Fase III: Contenido y Carga (Semanas 8 - 9)
+Se prepara todo el material de venta.
+
+Producción de Imágenes (Semana 8): Realizar la fotografía profesional de los productos de ropa (modelos, detalles, variantes de color).
+
+Redacción de Contenido (Semana 8 - 9): Escribir descripciones de productos atractivas, así como las políticas de envío, devolución y términos y condiciones.
+
+Carga de Inventario (Semana 9): Subir el catálogo completo de productos, precios y datos de stock a la plataforma.
+
+Hito Clave: Catálogo de productos completo y listo para la venta.
+
+Fase IV: Pruebas y Control de Calidad (QA) (Semana 10)
+Asegurar que la experiencia de compra sea perfecta.
+
+Pruebas Funcionales: Simular el proceso de compra completo (desde añadir al carrito hasta pagar).
+
+Pruebas de Usabilidad: Verificar la navegación en distintos dispositivos (móvil, tablet, escritorio) y la velocidad de carga.
+
+Corrección de Errores: Identificar y resolver todos los fallos (bugs) encontrados.
+
+Hito Clave: Lista de errores críticos resuelta.
